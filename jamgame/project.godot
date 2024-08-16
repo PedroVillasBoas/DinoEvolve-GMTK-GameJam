@@ -10,24 +10,18 @@ config_version=5
 
 [application]
 
-config/name="JamGame"
+config/name="Dino Evolve"
 run/main_scene="res://scenes/node_2d.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-ProjectMusicController="*res://addons/maaacks_music_controller/base/scenes/Autoloads/ProjectMusicController.tscn"
-PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
-GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
-
 [display]
 
-mouse_cursor/custom_image="res://Assets/Sprites/Cursor/Kenney-Cursor/default.png"
+mouse_cursor/custom_image="res://Assets/UI/Cursor/Kenney-Cursor/default.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/maaacks_music_controller/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/post_processing/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
+enabled=PackedStringArray()
 
 [gui_transitions]
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cja075gsj1d6x"]
+[gd_scene load_steps=11 format=3 uid="uid://tn0ngf82gdku"]
 
 [ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_chyeh"]
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_tr1xp"]
