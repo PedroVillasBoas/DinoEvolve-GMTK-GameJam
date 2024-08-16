@@ -16,4 +16,4 @@ config/icon="res://icon.svg"
 
 [display]
 
-mouse_cursor/custom_image="res://cursor/tile_0049.png"
+mouse_cursor/custom_image="res://Assets/Sprites/Cursor/Kenney-Cursor/default.png"
