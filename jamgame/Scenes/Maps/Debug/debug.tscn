@@ -1,9 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://b3leq5oovvusp"]
+[gd_scene load_steps=6 format=3 uid="uid://b3leq5oovvusp"]
 
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="1_kwxv2"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_ufojn"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_uma4w"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_wrsir"]
+
+[sub_resource type="Resource" id="Resource_t0xgx"]
+script = ExtResource("4_wrsir")
+duration = 1.0
+transition = 0
+ease = 2
 
 [node name="Debug" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+physics_interpolation_mode = 2
+
+[node name="PhantomCameraHost" type="Node" parent="Camera2D"]
+script = ExtResource("1_ufojn")
 
 [node name="Player" parent="." instance=ExtResource("1_kwxv2")]
+
+[node name="PhantomCamera2D" type="Node2D" parent="."]
+script = ExtResource("3_uma4w")
+tween_resource = SubResource("Resource_t0xgx")
