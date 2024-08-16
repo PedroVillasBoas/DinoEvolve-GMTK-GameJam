@@ -11,12 +11,40 @@ config_version=5
 [application]
 
 config/name="JamGame"
+run/main_scene="res://scenes/node_2d.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+ProjectMusicController="*res://addons/maaacks_music_controller/base/scenes/Autoloads/ProjectMusicController.tscn"
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
 
 [display]
 
 mouse_cursor/custom_image="res://Assets/Sprites/Cursor/Kenney-Cursor/default.png"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/maaacks_music_controller/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/post_processing/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
+
+[gui_transitions]
+
+config/default/auto_start=true
+config/default/fade_layout=true
+config/default/center_pivot=true
+config/default/duration=0.5
+config/default/delay=0.5
+config/default/transition_type="QUAD"
+config/default/ease_type="IN_OUT"
+config/default/animation_enter=4
+config/default/animation_leave=4
+
+[maaacks_credits_scene]
+
+disable_plugin_dialogues=true
+copy_path="res://Scenes/Mapas/Credits"
 
 [rendering]
 
