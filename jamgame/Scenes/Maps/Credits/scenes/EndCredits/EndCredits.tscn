@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2kuaqhb7s8y5"]
+[gd_scene load_steps=5 format=3 uid="uid://bagraegk311h0"]
 
-[ext_resource type="PackedScene" uid="uid://4rkhsu7verr7" path="res://Scenes/Maps/Credits/scenes/Credits/Credits.tscn" id="1_3rbnn"]
-[ext_resource type="Script" path="res://Scenes/Maps/Credits/scenes/EndCredits/EndCredits.gd" id="2_vflcd"]
-[ext_resource type="Script" path="res://addons/maaacks_credits_scene/base/scripts/CaptureFocus.gd" id="4_1efpd"]
+[ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://addons/maaacks_credits_scene/examples/scenes/Credits/Credits.tscn" id="1_885d8"]
+[ext_resource type="Script" path="res://addons/maaacks_credits_scene/examples/scenes/EndCredits/EndCredits.gd" id="2_6pwj4"]
+[ext_resource type="Script" path="res://addons/maaacks_credits_scene/base/scripts/CaptureFocus.gd" id="3_aoilo"]
+[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_credits_scene/base/scenes/MusicPlayers/BackgroundMusicPlayer.tscn" id="3_v7acr"]
 
-[node name="EndCredits" instance=ExtResource("1_3rbnn")]
-script = ExtResource("2_vflcd")
+[node name="EndCredits" instance=ExtResource("1_885d8")]
+script = ExtResource("2_6pwj4")
 main_menu_scene = ""
 
-[node name="BackgroundColor" type="ColorRect" parent="." index="0"]
+[node name="BackgroundMusicPlayer" parent="." index="0" instance=ExtResource("3_v7acr")]
+bus = &"Master"
+
+[node name="BackgroundColor" type="ColorRect" parent="." index="1"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,7 +21,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="BackgroundTextureRect" type="TextureRect" parent="." index="1"]
+[node name="BackgroundTextureRect" type="TextureRect" parent="." index="2"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -27,19 +31,10 @@ grow_vertical = 2
 expand_mode = 1
 stretch_mode = 5
 
-[node name="ScrollContainer" parent="." index="2"]
+[node name="ScrollContainer" parent="." index="3"]
 scroll_vertical = 0
 
-[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]
-custom_minimum_size = Vector2(0, 648)
-
-[node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
-custom_minimum_size = Vector2(1152, 0)
-
-[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
-custom_minimum_size = Vector2(0, 648)
-
-[node name="CenterContainer" type="CenterContainer" parent="." index="3"]
+[node name="CenterContainer" type="CenterContainer" parent="." index="4"]
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -75,7 +70,7 @@ size_flags_vertical = 3
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/separation = 24
-script = ExtResource("4_1efpd")
+script = ExtResource("3_aoilo")
 
 [node name="ExitButton" type="Button" parent="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer" index="0"]
 unique_name_in_owner = true

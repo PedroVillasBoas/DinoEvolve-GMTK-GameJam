@@ -1,13 +1,17 @@
-[gd_scene load_steps=3 format=3 uid="uid://4rkhsu7verr7"]
+[gd_scene load_steps=3 format=3 uid="uid://c1g50h2avck3w"]
 
-[ext_resource type="PackedScene" path="res://addons/maaacks_credits_scene/base/scenes/Credits/Credits.tscn" id="1_pha3h"]
-[ext_resource type="Script" path="res://Scenes/Mapas/Credits/scenes/Credits/Credits.gd" id="2_t7xgb"]
+[ext_resource type="PackedScene" uid="uid://t2dui8ppm3a4" path="res://addons/maaacks_credits_scene/base/scenes/Credits/Credits.tscn" id="1_n45le"]
+[ext_resource type="Script" path="res://addons/maaacks_credits_scene/examples/scenes/Credits/Credits.gd" id="2_q7msw"]
 
-[node name="Credits" instance=ExtResource("1_pha3h")]
-script = ExtResource("2_t7xgb")
-attribution_file_path = "res://Scenes/Mapas/Credits/ATTRIBUTION.md"
+[node name="Credits" instance=ExtResource("1_n45le")]
+script = ExtResource("2_q7msw")
+attribution_file_path = "res://addons/maaacks_credits_scene/examples/ATTRIBUTION.md"
+
+[node name="HeaderSpace" parent="ScrollContainer/VBoxContainer" index="0"]
+custom_minimum_size = Vector2(0, 648)
 
 [node name="CreditsLabel" parent="ScrollContainer/VBoxContainer" index="1"]
+custom_minimum_size = Vector2(1152, 0)
 text = "[center][font_size=48]Collaborators[/font_size]
 
 [font_size=32]Role[/font_size]
@@ -40,3 +44,6 @@ Author: [url=https://github.com/Maaack/Godot-Credits-Scene/graphs/contributors]M
 Source: [url=https://github.com/Maaack/Godot-Credits-Scene]github: Godot-Credits-Scene[/url]  
 License: [url=LICENSE.txt]MIT License[/url]  
 [/center]"
+
+[node name="FooterSpace" parent="ScrollContainer/VBoxContainer" index="2"]
+custom_minimum_size = Vector2(0, 648)
