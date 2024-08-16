@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
+ProjectUISoundController="*res://addons/maaacks_ui_sound_controller/base/scenes/Autoloads/ProjectUISoundController.tscn"
+ProjectMusicController="*res://addons/maaacks_music_controller/base/scenes/Autoloads/ProjectMusicController.tscn"
 
 [display]
 
@@ -26,7 +28,7 @@ mouse_cursor/custom_image="res://Assets/UI/Cursor/Kenney-Cursor/default.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
+enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/maaacks_music_controller/plugin.cfg", "res://addons/maaacks_ui_sound_controller/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
 
 [gui_transitions]
 
