@@ -26,7 +26,7 @@ mouse_cursor/custom_image="res://Assets/UI/Cursor/Kenney-Cursor/default.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
+enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
 
 [gui_transitions]
 
