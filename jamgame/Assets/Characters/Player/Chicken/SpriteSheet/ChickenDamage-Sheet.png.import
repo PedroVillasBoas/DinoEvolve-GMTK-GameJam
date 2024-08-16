@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhjufvrqqr01f"
-path="res://.godot/imported/default.png-b60b45f69ec95f97929464d32324eab0.ctex"
+uid="uid://b76p1kivplu3"
+path="res://.godot/imported/ChickenDamage-Sheet.png-47316d3912fd32ba2e14b17bf48ab6a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Cursor/Kenney-Cursor/default.png"
-dest_files=["res://.godot/imported/default.png-b60b45f69ec95f97929464d32324eab0.ctex"]
+source_file="res://Assets/Characters/Player/Chicken/SpriteSheet/ChickenDamage-Sheet.png"
+dest_files=["res://.godot/imported/ChickenDamage-Sheet.png-47316d3912fd32ba2e14b17bf48ab6a1.ctex"]
 
 [params]
 
