@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bidy1oabtcgdp"
-path="res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"
+uid="uid://b7cs6me43ufh3"
+path="res://.godot/imported/inventory_container.png-12241277f279bfc4bf7d5dad6b3e8ff2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simple-gui-transitions/icon.png"
-dest_files=["res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"]
+source_file="res://addons/phantom_camera/examples/textures/2D/inventory_container.png"
+dest_files=["res://.godot/imported/inventory_container.png-12241277f279bfc4bf7d5dad6b3e8ff2.ctex"]
 
 [params]
 

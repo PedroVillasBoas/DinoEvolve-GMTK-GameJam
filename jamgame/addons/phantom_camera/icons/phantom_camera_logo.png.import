@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bidy1oabtcgdp"
-path="res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"
+uid="uid://cc0wmici0eic8"
+path="res://.godot/imported/phantom_camera_logo.png-8b8d347b5e4800c86cd8095d030a3e5a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simple-gui-transitions/icon.png"
-dest_files=["res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"]
+source_file="res://addons/phantom_camera/icons/phantom_camera_logo.png"
+dest_files=["res://.godot/imported/phantom_camera_logo.png-8b8d347b5e4800c86cd8095d030a3e5a.ctex"]
 
 [params]
 

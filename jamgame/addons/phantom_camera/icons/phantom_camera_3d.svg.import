@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bidy1oabtcgdp"
-path="res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"
+uid="uid://bf8bxgxx71qki"
+path="res://.godot/imported/phantom_camera_3d.svg-41ed612e834470377fb56eebffa083fe.ctex"
 metadata={
+"has_editor_variant": true,
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simple-gui-transitions/icon.png"
-dest_files=["res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"]
+source_file="res://addons/phantom_camera/icons/phantom_camera_3d.svg"
+dest_files=["res://.godot/imported/phantom_camera_3d.svg-41ed612e834470377fb56eebffa083fe.ctex"]
 
 [params]
 
@@ -32,3 +33,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=true

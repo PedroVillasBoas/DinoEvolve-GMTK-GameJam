@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bidy1oabtcgdp"
-path="res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"
+uid="uid://dy8eifa6aw2en"
+path="res://.godot/imported/PriorityOverride.svg-e76e07f4bbd98169f119e17fe5f2f03f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simple-gui-transitions/icon.png"
-dest_files=["res://.godot/imported/icon.png-a3e64f21cb36cf25b2a1c958ab55ae39.ctex"]
+source_file="res://addons/phantom_camera/icons/misc/PriorityOverride.svg"
+dest_files=["res://.godot/imported/PriorityOverride.svg-e76e07f4bbd98169f119e17fe5f2f03f.ctex"]
 
 [params]
 
@@ -32,3 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
+svg/scale=1.0
+editor/scale_with_editor_scale=false
+editor/convert_colors_with_editor_theme=false

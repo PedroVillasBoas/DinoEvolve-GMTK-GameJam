@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Dino Evolve"
-run/main_scene="res://scenes/node_2d.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://Assets/UI/BootSplash/splash-screen-pink-gradient.png"
 config/icon="res://icon.svg"
 
 [autoload]
 
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
 
 [display]
@@ -26,7 +26,7 @@ mouse_cursor/custom_image="res://Assets/UI/Cursor/Kenney-Cursor/default.png"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/simple-gui-transitions/plugin.cfg")
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
 
 [gui_transitions]
 
