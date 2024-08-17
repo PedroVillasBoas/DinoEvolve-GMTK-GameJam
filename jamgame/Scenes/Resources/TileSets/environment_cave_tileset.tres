@@ -1,0 +1,34 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://v676r5ufl47f"]
+
+[ext_resource type="Texture2D" uid="uid://dav07a160hvfs" path="res://Assets/Tilemaps/Environment-Cave/PlatformCenter.png" id="1_1w5gx"]
+[ext_resource type="Texture2D" uid="uid://bsfuxfe7mlm4q" path="res://Assets/Tilemaps/Environment-Cave/PlatformLeft.png" id="2_um6b2"]
+[ext_resource type="Texture2D" uid="uid://daegqcnvqbouk" path="res://Assets/Tilemaps/Environment-Cave/PlatformRight.png" id="3_78ywa"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7m5ee"]
+resource_name = "Plat_Center"
+texture = ExtResource("1_1w5gx")
+texture_region_size = Vector2i(32, 50)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -25, 16, -25, 16, 25, -16, 25)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8oa6w"]
+resource_name = "Plat_Left"
+texture = ExtResource("2_um6b2")
+texture_region_size = Vector2i(32, 50)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -25, 16, -25, 16, 25, -16, 25)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gwkmk"]
+resource_name = "Plat_Right"
+texture = ExtResource("3_78ywa")
+texture_region_size = Vector2i(32, 50)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -25, 16, -25, 16, 25, -16, 25)
+
+[resource]
+tile_size = Vector2i(32, 50)
+physics_layer_0/collision_layer = 8
+physics_layer_0/collision_mask = 0
+sources/1 = SubResource("TileSetAtlasSource_7m5ee")
+sources/2 = SubResource("TileSetAtlasSource_8oa6w")
+sources/3 = SubResource("TileSetAtlasSource_gwkmk")

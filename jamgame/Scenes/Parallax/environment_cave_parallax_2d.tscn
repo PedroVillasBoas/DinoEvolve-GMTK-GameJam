@@ -1,0 +1,58 @@
+[gd_scene load_steps=6 format=3 uid="uid://c1leo5rgeuj1n"]
+
+[ext_resource type="Texture2D" uid="uid://dfa1xik5x1bxy" path="res://Assets/Background/Environment-Cave/Sky.png" id="1_hh3g8"]
+[ext_resource type="Texture2D" uid="uid://dl0iesrglrd0a" path="res://Assets/Background/Environment-Cave/Moon.png" id="2_nl4bc"]
+[ext_resource type="Texture2D" uid="uid://dppkr6sy71whj" path="res://Assets/Background/Environment-Cave/Stars.png" id="3_cwvjq"]
+[ext_resource type="Texture2D" uid="uid://cak34oohxdm5d" path="res://Assets/Background/Environment-Cave/CaveP2.png" id="4_ukx21"]
+[ext_resource type="Texture2D" uid="uid://b4xnm4xdcqf4m" path="res://Assets/Background/Environment-Cave/CaveP1.png" id="5_yyyyd"]
+
+[node name="EnvironmentCaveParallax2D" type="Node2D"]
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_offset = Vector2(-100, -202)
+repeat_size = Vector2(2160, 0)
+
+[node name="Sky" type="Sprite2D" parent="Sky"]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("1_hh3g8")
+centered = false
+
+[node name="Moon" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(-100, -40)
+
+[node name="Moon" type="Sprite2D" parent="Moon"]
+position = Vector2(581, 117)
+scale = Vector2(3, 3)
+texture = ExtResource("2_nl4bc")
+centered = false
+
+[node name="Stars" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.3, 1)
+scroll_offset = Vector2(-100, -202)
+repeat_size = Vector2(2070, 0)
+
+[node name="Stars" type="Sprite2D" parent="Stars"]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("3_cwvjq")
+centered = false
+
+[node name="CaveBack" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.6, 1)
+scroll_offset = Vector2(-100, -202)
+repeat_size = Vector2(2160, 0)
+
+[node name="CaveBack" type="Sprite2D" parent="CaveBack"]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("4_ukx21")
+centered = false
+
+[node name="CaveFront" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.9, 1)
+scroll_offset = Vector2(-100, -202)
+repeat_size = Vector2(2160, 0)
+
+[node name="CaveFront" type="Sprite2D" parent="CaveFront"]
+scale = Vector2(4.5, 4.5)
+texture = ExtResource("5_yyyyd")
+centered = false

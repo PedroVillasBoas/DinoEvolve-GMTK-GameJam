@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dfa1xik5x1bxy"
-path="res://.godot/imported/Sky.png-aeb6ad3e95134d5b2482ffada0d55972.ctex"
+uid="uid://bqday4ckmw88c"
+path="res://.godot/imported/Water_01.png-9b7dc134787b1317eee0fe7e88fef843.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Cave Environment/Sky.png"
-dest_files=["res://.godot/imported/Sky.png-aeb6ad3e95134d5b2482ffada0d55972.ctex"]
+source_file="res://Assets/Tilemaps/Environment-Cave/Water/Water_01.png"
+dest_files=["res://.godot/imported/Water_01.png-9b7dc134787b1317eee0fe7e88fef843.ctex"]
 
 [params]
 

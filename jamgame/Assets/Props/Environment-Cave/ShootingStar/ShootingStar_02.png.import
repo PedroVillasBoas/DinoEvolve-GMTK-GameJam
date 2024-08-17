@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dl0iesrglrd0a"
-path="res://.godot/imported/Moon.png-12d936ade3ebdec4dfded0037489de23.ctex"
+uid="uid://b7exy3wqu2qyf"
+path="res://.godot/imported/ShootingStar_02.png-aa3d1393ee4004f07f2a0ca8953e2c2f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Cave Environment/Moon.png"
-dest_files=["res://.godot/imported/Moon.png-12d936ade3ebdec4dfded0037489de23.ctex"]
+source_file="res://Assets/Props/Environment-Cave/ShootingStar/ShootingStar_02.png"
+dest_files=["res://.godot/imported/ShootingStar_02.png-aa3d1393ee4004f07f2a0ca8953e2c2f.ctex"]
 
 [params]
 

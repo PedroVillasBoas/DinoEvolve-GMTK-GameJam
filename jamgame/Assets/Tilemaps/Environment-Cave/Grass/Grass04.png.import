@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dppkr6sy71whj"
-path="res://.godot/imported/Stars.png-e673cf14168c0e080c40d99180c176a0.ctex"
+uid="uid://bue8vy5d0ynjc"
+path="res://.godot/imported/Grass04.png-27b4848b93d9ae5b811db1a19f3c1cb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Cave Environment/Stars.png"
-dest_files=["res://.godot/imported/Stars.png-e673cf14168c0e080c40d99180c176a0.ctex"]
+source_file="res://Assets/Tilemaps/Environment-Cave/Grass/Grass04.png"
+dest_files=["res://.godot/imported/Grass04.png-27b4848b93d9ae5b811db1a19f3c1cb3.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b4xnm4xdcqf4m"
-path="res://.godot/imported/CaveP1.png-2bd63d05ddb7d1f2ece66d1051a3de65.ctex"
+uid="uid://b20bkpiyb1vya"
+path="res://.godot/imported/Water_08.png-4a8843d2d8d448cc7179083215db231f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/Cave Environment/CaveP1.png"
-dest_files=["res://.godot/imported/CaveP1.png-2bd63d05ddb7d1f2ece66d1051a3de65.ctex"]
+source_file="res://Assets/Tilemaps/Environment-Cave/Water/Water_08.png"
+dest_files=["res://.godot/imported/Water_08.png-4a8843d2d8d448cc7179083215db231f.ctex"]
 
 [params]
 
