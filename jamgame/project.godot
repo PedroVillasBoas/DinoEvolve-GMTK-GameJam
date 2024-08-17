@@ -78,6 +78,12 @@ shoot={
 disable_plugin_dialogues=true
 copy_path="res://Scenes/Mapas/Credits"
 
+[physics]
+
+2d/run_on_separate_thread=true
+common/physics_jitter_fix=0.0
+common/physics_interpolation=true
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
