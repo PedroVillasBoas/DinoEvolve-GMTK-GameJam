@@ -3,7 +3,7 @@ extends CharacterBody2D
 const SPEED = 700.0
 const JUMP_VELOCITY = -800.0
 
-var can_move : bool = false
+var can_move : bool = true
 var is_chicken : bool = false
 var is_dead : bool = false
 
