@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=3 uid="uid://buhfvaygu7tdo"]
+
+[ext_resource type="Texture2D" uid="uid://tc1r0xb7oduk" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/sky.png" id="1_1oa8n"]
+[ext_resource type="Texture2D" uid="uid://cmv534ewd1bwb" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/clouds_front_t.png" id="2_i1s66"]
+[ext_resource type="Texture2D" uid="uid://ccgv2yy5isi16" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/clouds_mid_t.png" id="3_nf6lp"]
+[ext_resource type="Texture2D" uid="uid://7rjk3bp1ewh6" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/far_mountains.png" id="4_as4rt"]
+[ext_resource type="Texture2D" uid="uid://blamixwj4jiq8" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/grassy_mountains.png" id="5_lsqqd"]
+[ext_resource type="Texture2D" uid="uid://cqhmirclynchk" path="res://Assets/Background/Grassy_Mountains_Parallax_Background-vnitti/HalfColor/hill.png" id="6_im1g3"]
+
+[node name="GrassyMountainsParallax2D" type="Node2D"]
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="Sky" type="Sprite2D" parent="Sky"]
+scale = Vector2(5, 5)
+texture = ExtResource("1_1oa8n")
+centered = false
+
+[node name="CloudsFront" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.1, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="CloudsFront" type="Sprite2D" parent="CloudsFront"]
+scale = Vector2(5, 5)
+texture = ExtResource("2_i1s66")
+centered = false
+
+[node name="CloudsMid" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.15, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="CloudsMid" type="Sprite2D" parent="CloudsMid"]
+scale = Vector2(5, 5)
+texture = ExtResource("3_nf6lp")
+centered = false
+
+[node name="FarMountains" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.18, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="FarMountains" type="Sprite2D" parent="FarMountains"]
+scale = Vector2(5, 5)
+texture = ExtResource("4_as4rt")
+centered = false
+
+[node name="GrassyMountains" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.2, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="GrassyMountains" type="Sprite2D" parent="GrassyMountains"]
+scale = Vector2(5, 5)
+texture = ExtResource("5_lsqqd")
+centered = false
+
+[node name="Hill" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0.21, 1)
+scroll_offset = Vector2(489, 77)
+repeat_size = Vector2(1920, 0)
+
+[node name="Hill" type="Sprite2D" parent="Hill"]
+scale = Vector2(5, 5)
+texture = ExtResource("6_im1g3")
+centered = false
