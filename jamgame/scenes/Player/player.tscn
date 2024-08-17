@@ -1,71 +1,9 @@
-[gd_scene load_steps=11 format=3 uid="uid://tn0ngf82gdku"]
+[gd_scene load_steps=3 format=3 uid="uid://tn0ngf82gdku"]
 
-[ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_chyeh"]
 [ext_resource type="Script" path="res://Scripts/Player/player.gd" id="1_tr1xp"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jchw1"]
-radius = 28.0
-height = 64.0
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nmcf0"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_igg4f"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_g2w3l"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hfij0"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(72, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fuf8g"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(96, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_u8406"]
-atlas = ExtResource("1_chyeh")
-region = Rect2(120, 0, 24, 24)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_coaxa"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nmcf0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_igg4f")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_g2w3l")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hfij0")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_fuf8g")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_u8406")
-}],
-"loop": true,
-"name": &"movement",
-"speed": 10.0
-}]
+[ext_resource type="PackedScene" uid="uid://pwxyrwpunsum" path="res://Scenes/Player/Dinos/Female/loki_female.tscn" id="2_gtcjt"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_tr1xp")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_jchw1")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(4, 4)
-sprite_frames = SubResource("SpriteFrames_coaxa")
-animation = &"movement"
-autoplay = "movement"
-frame_progress = 0.179723
+[node name="LokiFemale" parent="." instance=ExtResource("2_gtcjt")]

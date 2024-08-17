@@ -1,0 +1,154 @@
+[gd_scene load_steps=23 format=3 uid="uid://pwxyrwpunsum"]
+
+[ext_resource type="Texture2D" uid="uid://hqbyasd7n8tt" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/jump.png" id="1_82f5q"]
+[ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="1_hvn15"]
+[ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_xbogd"]
+[ext_resource type="Texture2D" uid="uid://5bkq314h48ly" path="res://Assets/Characters/Player/Dino-Family/female/loki/egg/hatch.png" id="4_y1nr7"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1uef"]
+radius = 49.0
+height = 162.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qcx3u"]
+atlas = ExtResource("1_hvn15")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6p2ta"]
+atlas = ExtResource("1_hvn15")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ifm85"]
+atlas = ExtResource("1_hvn15")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5lrfn"]
+atlas = ExtResource("1_hvn15")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gv7cg"]
+atlas = ExtResource("1_hvn15")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e7g2n"]
+atlas = ExtResource("1_82f5q")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmcf0"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igg4f"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2w3l"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfij0"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fuf8g"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u8406"]
+atlas = ExtResource("1_xbogd")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq1a7"]
+atlas = ExtResource("4_y1nr7")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_odc72"]
+atlas = ExtResource("4_y1nr7")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dtx7"]
+atlas = ExtResource("4_y1nr7")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qeqk6"]
+atlas = ExtResource("4_y1nr7")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e7xms"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qcx3u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6p2ta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ifm85")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5lrfn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gv7cg")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e7g2n")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmcf0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igg4f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2w3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfij0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fuf8g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u8406")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq1a7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_odc72")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dtx7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qeqk6")
+}],
+"loop": false,
+"name": &"spawn",
+"speed": 10.0
+}]
+
+[node name="LokiFemale" type="CollisionShape2D"]
+shape = SubResource("CapsuleShape2D_k1uef")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_e7xms")
+animation = &"spawn"
+autoplay = "spawn"
