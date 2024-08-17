@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://pwxyrwpunsum"]
+[gd_scene load_steps=26 format=3 uid="uid://pwxyrwpunsum"]
 
 [ext_resource type="Texture2D" uid="uid://hqbyasd7n8tt" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/jump.png" id="1_82f5q"]
 [ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="1_hvn15"]
@@ -29,9 +29,21 @@ region = Rect2(72, 0, 24, 24)
 atlas = ExtResource("1_hvn15")
 region = Rect2(96, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_e7g2n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnigx"]
 atlas = ExtResource("1_82f5q")
 region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh8se"]
+atlas = ExtResource("1_82f5q")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7h4yc"]
+atlas = ExtResource("1_82f5q")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_viaqj"]
+atlas = ExtResource("1_82f5q")
+region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nmcf0"]
 atlas = ExtResource("1_xbogd")
@@ -91,17 +103,26 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gv7cg")
 }],
-"loop": false,
+"loop": true,
 "name": &"dead",
 "speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_e7g2n")
+"texture": SubResource("AtlasTexture_hnigx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh8se")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7h4yc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_viaqj")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 1.0
+"speed": 8.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -152,3 +173,5 @@ scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_e7xms")
 animation = &"spawn"
 autoplay = "spawn"
+frame = 3
+frame_progress = 1.0

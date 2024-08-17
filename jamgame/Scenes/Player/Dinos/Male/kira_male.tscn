@@ -1,8 +1,8 @@
-[gd_scene load_steps=23 format=3 uid="uid://cgiiu7wkackgi"]
+[gd_scene load_steps=26 format=3 uid="uid://cgiiu7wkackgi"]
 
 [ext_resource type="Texture2D" uid="uid://dkfyravhib0qe" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/dead.png" id="1_c6smk"]
 [ext_resource type="Texture2D" uid="uid://db1sxfaj2b0jc" path="res://Assets/Characters/Player/Dino-Family/male/kira/egg/hatch.png" id="1_x2lp7"]
-[ext_resource type="Texture2D" uid="uid://bfbwg617rljkm" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/jump.png" id="2_vwc6g"]
+[ext_resource type="Texture2D" uid="uid://b1cyaovfnqogq" path="res://Assets/Characters/Player/Dino-Family/female/kira/base/jump.png" id="2_c4pu6"]
 [ext_resource type="Texture2D" uid="uid://t6mc6gqvopwj" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/move.png" id="3_kxs2b"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_eka5e"]
@@ -29,9 +29,21 @@ region = Rect2(72, 0, 24, 24)
 atlas = ExtResource("1_c6smk")
 region = Rect2(96, 0, 24, 24)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ts1yf"]
-atlas = ExtResource("2_vwc6g")
+[sub_resource type="AtlasTexture" id="AtlasTexture_40yj7"]
+atlas = ExtResource("2_c4pu6")
 region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmrnj"]
+atlas = ExtResource("2_c4pu6")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wepe"]
+atlas = ExtResource("2_c4pu6")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vbwkp"]
+atlas = ExtResource("2_c4pu6")
+region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2dbt8"]
 atlas = ExtResource("3_kxs2b")
@@ -91,17 +103,26 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v0xhg")
 }],
-"loop": false,
+"loop": true,
 "name": &"dead",
 "speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ts1yf")
+"texture": SubResource("AtlasTexture_40yj7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmrnj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wepe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vbwkp")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 1.0
+"speed": 10.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -150,5 +171,6 @@ shape = SubResource("CapsuleShape2D_eka5e")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_anbja")
-animation = &"spawn"
+animation = &"dead"
 autoplay = "spawn"
+frame_progress = 0.659912
