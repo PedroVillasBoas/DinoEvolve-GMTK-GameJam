@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://b3leq5oovvusp"]
+[gd_scene load_steps=14 format=4 uid="uid://b3leq5oovvusp"]
 
 [ext_resource type="PackedScene" uid="uid://cja075gsj1d6x" path="res://Scenes/Player/player.tscn" id="1_kwxv2"]
 [ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
@@ -8,6 +8,9 @@
 [ext_resource type="TileSet" uid="uid://bqdh4442csqwy" path="res://scenes/Resources/TileSets/tresure_hunters_tileset.tres" id="5_gvutl"]
 [ext_resource type="Texture2D" uid="uid://bwif8kxmtiv87" path="res://Assets/Items/Collectables/placeholder.png" id="7_flqj0"]
 [ext_resource type="Script" path="res://Scripts/Handlers/collectable_placeholder.gd" id="8_qe6wr"]
+[ext_resource type="Script" path="res://Scripts/GameUi/game_ui.gd" id="9_vidth"]
+[ext_resource type="Texture2D" uid="uid://is0i5h7daf47" path="res://Assets/UI/PapernBooksUI/UI books & more.png" id="10_cd5r8"]
+[ext_resource type="FontFile" uid="uid://dn4bifaomw6es" path="res://Assets/UI/ThaleahFat-font/ThaleahFat.ttf" id="11_spggh"]
 
 [sub_resource type="Resource" id="Resource_t0xgx"]
 script = ExtResource("4_wrsir")
@@ -61,3 +64,31 @@ texture = ExtResource("7_flqj0")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="collectablePlaceholder"]
 position = Vector2(0.953644, -1.33443)
 shape = SubResource("CapsuleShape2D_p57ty")
+
+[node name="TimeScoreUI" type="CanvasLayer" parent="."]
+
+[node name="gameUI" type="Control" parent="TimeScoreUI"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_vidth")
+
+[node name="placa" type="Sprite2D" parent="TimeScoreUI/gameUI"]
+position = Vector2(223.27, 84.0526)
+scale = Vector2(13.0794, 10.2566)
+texture = ExtResource("10_cd5r8")
+region_enabled = true
+region_rect = Rect2(80, 304, 32, 16)
+
+[node name="Score" type="Label" parent="TimeScoreUI/gameUI"]
+layout_mode = 1
+offset_left = 83.0
+offset_top = 54.0
+offset_right = 347.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("11_spggh")
+theme_override_font_sizes/font_size = 58
+text = "Score: 00"
