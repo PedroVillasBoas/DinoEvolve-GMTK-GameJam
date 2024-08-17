@@ -48,9 +48,10 @@ texture = ExtResource("4_ukx21")
 centered = false
 
 [node name="CaveFront" type="Parallax2D" parent="."]
+z_index = 1
 scroll_scale = Vector2(0.9, 1)
-scroll_offset = Vector2(-100, -202)
-repeat_size = Vector2(2160, 0)
+scroll_offset = Vector2(-100, -40)
+repeat_size = Vector2(2160, 1215)
 
 [node name="CaveFront" type="Sprite2D" parent="CaveFront"]
 scale = Vector2(4.5, 4.5)

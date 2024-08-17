@@ -1,0 +1,95 @@
+[gd_scene load_steps=14 format=3 uid="uid://cub41qvm3xf3x"]
+
+[ext_resource type="Texture2D" uid="uid://baeca3dx5urqp" path="res://Assets/Characters/Player/Chicken/SpriteSheet/ChickenDie-Sheet.png" id="1_15v6t"]
+[ext_resource type="Script" path="res://Scripts/Handlers/chicken_animation_handler.gd" id="1_cm7nn"]
+[ext_resource type="Texture2D" uid="uid://c0ls7a56kq2js" path="res://Assets/Characters/Player/Chicken/SpriteSheet/ChickenFly-Sheet.png" id="2_k0u6f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5co7"]
+size = Vector2(20, 12)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ucug"]
+atlas = ExtResource("1_15v6t")
+region = Rect2(0, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw5s7"]
+atlas = ExtResource("1_15v6t")
+region = Rect2(40, 0, 20, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p3mpa"]
+atlas = ExtResource("2_k0u6f")
+region = Rect2(0, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oleqg"]
+atlas = ExtResource("2_k0u6f")
+region = Rect2(32, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bu1ha"]
+atlas = ExtResource("2_k0u6f")
+region = Rect2(64, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k1oyf"]
+atlas = ExtResource("2_k0u6f")
+region = Rect2(96, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ovpsi"]
+atlas = ExtResource("2_k0u6f")
+region = Rect2(128, 0, 32, 21)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ndhk7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ucug")
+}],
+"loop": false,
+"name": &"dead_fly",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw5s7")
+}],
+"loop": false,
+"name": &"dead_ground",
+"speed": 1.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p3mpa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oleqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bu1ha")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k1oyf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ovpsi")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_epytx"]
+size = Vector2(20, 12)
+
+[node name="Chicken" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "chicken_collision_handler")]
+shape = SubResource("RectangleShape2D_b5co7")
+script = ExtResource("1_cm7nn")
+animated_sprite = NodePath("AnimatedSprite2D")
+chicken_collision_handler = NodePath("Chicken_Collision_Handler")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ndhk7")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="Chicken_Collision_Handler" type="Area2D" parent="."]
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Chicken_Collision_Handler"]
+shape = SubResource("RectangleShape2D_epytx")

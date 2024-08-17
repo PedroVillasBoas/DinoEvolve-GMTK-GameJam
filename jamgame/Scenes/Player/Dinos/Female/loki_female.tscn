@@ -1,9 +1,11 @@
-[gd_scene load_steps=26 format=3 uid="uid://pwxyrwpunsum"]
+[gd_scene load_steps=25 format=3 uid="uid://pwxyrwpunsum"]
 
+[ext_resource type="Script" path="res://Scripts/Handlers/animation_handler.gd" id="1_25mn7"]
 [ext_resource type="Texture2D" uid="uid://hqbyasd7n8tt" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/jump.png" id="1_82f5q"]
 [ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="1_hvn15"]
 [ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_xbogd"]
 [ext_resource type="Texture2D" uid="uid://5bkq314h48ly" path="res://Assets/Characters/Player/Dino-Family/female/loki/egg/hatch.png" id="4_y1nr7"]
+[ext_resource type="PackedScene" uid="uid://4jistgv25la3" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_swdf3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1uef"]
 radius = 49.0
@@ -32,18 +34,6 @@ region = Rect2(96, 0, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_hnigx"]
 atlas = ExtResource("1_82f5q")
 region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_oh8se"]
-atlas = ExtResource("1_82f5q")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7h4yc"]
-atlas = ExtResource("1_82f5q")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_viaqj"]
-atlas = ExtResource("1_82f5q")
-region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nmcf0"]
 atlas = ExtResource("1_xbogd")
@@ -110,19 +100,10 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_hnigx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_oh8se")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7h4yc")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_viaqj")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 8.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -162,16 +143,19 @@ animations = [{
 }],
 "loop": false,
 "name": &"spawn",
-"speed": 10.0
+"speed": 5.0
 }]
 
-[node name="LokiFemale" type="CollisionShape2D"]
+[node name="LokiFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "dino_collision_handler")]
 shape = SubResource("CapsuleShape2D_k1uef")
+script = ExtResource("1_25mn7")
+animated_sprite = NodePath("AnimatedSprite2D")
+dino_collision_handler = NodePath("")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_e7xms")
-animation = &"spawn"
-autoplay = "spawn"
-frame = 3
-frame_progress = 1.0
+animation = &"movement"
+autoplay = "movement"
+
+[node name="Dino_Collision_Handler" parent="." instance=ExtResource("6_swdf3")]

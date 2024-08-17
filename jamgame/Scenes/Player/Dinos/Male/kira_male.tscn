@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://cgiiu7wkackgi"]
+[gd_scene load_steps=24 format=3 uid="uid://cgiiu7wkackgi"]
 
 [ext_resource type="Texture2D" uid="uid://dkfyravhib0qe" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/dead.png" id="1_c6smk"]
+[ext_resource type="Script" path="res://Scripts/Handlers/animation_handler.gd" id="1_lljl6"]
 [ext_resource type="Texture2D" uid="uid://db1sxfaj2b0jc" path="res://Assets/Characters/Player/Dino-Family/male/kira/egg/hatch.png" id="1_x2lp7"]
 [ext_resource type="Texture2D" uid="uid://b1cyaovfnqogq" path="res://Assets/Characters/Player/Dino-Family/female/kira/base/jump.png" id="2_c4pu6"]
 [ext_resource type="Texture2D" uid="uid://t6mc6gqvopwj" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/move.png" id="3_kxs2b"]
@@ -32,18 +33,6 @@ region = Rect2(96, 0, 24, 24)
 [sub_resource type="AtlasTexture" id="AtlasTexture_40yj7"]
 atlas = ExtResource("2_c4pu6")
 region = Rect2(0, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmrnj"]
-atlas = ExtResource("2_c4pu6")
-region = Rect2(24, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6wepe"]
-atlas = ExtResource("2_c4pu6")
-region = Rect2(48, 0, 24, 24)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vbwkp"]
-atlas = ExtResource("2_c4pu6")
-region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2dbt8"]
 atlas = ExtResource("3_kxs2b")
@@ -110,19 +99,10 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_40yj7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bmrnj")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_6wepe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vbwkp")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 10.0
+"speed": 1.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -165,12 +145,13 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="KiraMale" type="CollisionShape2D"]
+[node name="KiraMale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite")]
 shape = SubResource("CapsuleShape2D_eka5e")
+script = ExtResource("1_lljl6")
+animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_anbja")
-animation = &"dead"
+animation = &"jump"
 autoplay = "spawn"
-frame_progress = 0.659912
