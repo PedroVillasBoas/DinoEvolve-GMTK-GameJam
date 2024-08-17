@@ -6,6 +6,7 @@ const JUMP_VELOCITY = -800.0
 var can_move : bool = true
 var is_chicken : bool = false
 var is_dead : bool = false
+var score = 0
 
 signal dead
 

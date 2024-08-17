@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://b3leq5oovvusp"]
 
-[ext_resource type="PackedScene" uid="uid://cja075gsj1d6x" path="res://Scenes/Player/player.tscn" id="1_kwxv2"]
+[ext_resource type="PackedScene" uid="uid://cja075gsj1d6x" path="res://scenes/Player/player.tscn" id="1_kwxv2"]
 [ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="1_ufojn"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_uma4w"]
@@ -19,7 +19,7 @@ transition = 0
 ease = 2
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p57ty"]
-radius = 9.59932
+radius = 9.5993
 height = 19.1986
 
 [node name="Debug" type="Node2D"]
@@ -37,11 +37,11 @@ script = ExtResource("1_ufojn")
 position = Vector2(1449, 666)
 script = ExtResource("3_uma4w")
 follow_mode = 5
+follow_target = NodePath("../Player")
 tween_resource = SubResource("Resource_t0xgx")
 follow_offset = Vector2(500, -150)
 follow_damping = true
 follow_damping_value = Vector2(0.2, 0.2)
-follow_target = NodePath("../Player")
 
 [node name="TileMap" type="Node2D" parent="."]
 position = Vector2(703, 895)
@@ -86,10 +86,12 @@ region_rect = Rect2(80, 304, 32, 16)
 
 [node name="Score" type="Label" parent="TimeScoreUI/gameUI"]
 layout_mode = 1
-offset_left = 83.0
-offset_top = 54.0
-offset_right = 347.0
-offset_bottom = 123.0
+offset_left = 100.0
+offset_top = 59.0
+offset_right = 364.0
+offset_bottom = 128.0
 theme_override_fonts/font = ExtResource("11_spggh")
-theme_override_font_sizes/font_size = 58
+theme_override_font_sizes/font_size = 55
 text = "Score: 00"
+
+[connection signal="body_entered" from="collectablePlaceholder" to="collectablePlaceholder" method="_on_body_entered"]

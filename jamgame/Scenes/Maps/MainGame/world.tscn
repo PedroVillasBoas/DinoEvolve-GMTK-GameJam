@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_73m0v"]
 [ext_resource type="TileSet" uid="uid://bqdh4442csqwy" path="res://scenes/Resources/TileSets/tresure_hunters_tileset.tres" id="2_tes7i"]
-[ext_resource type="PackedScene" uid="uid://cja075gsj1d6x" path="res://Scenes/Player/player.tscn" id="3_2pfoa"]
+[ext_resource type="PackedScene" uid="uid://cja075gsj1d6x" path="res://scenes/Player/player.tscn" id="3_2pfoa"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_4bamc"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_16gvs"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_trwrg"]
@@ -37,8 +37,8 @@ script = ExtResource("4_4bamc")
 position = Vector2(1293, 652)
 script = ExtResource("5_16gvs")
 follow_mode = 5
+follow_target = NodePath("../Player")
 tween_resource = SubResource("Resource_itjnl")
 follow_offset = Vector2(500, -150)
 follow_damping = true
 follow_damping_value = Vector2(0.2, 0.2)
-follow_target = NodePath("../Player")
