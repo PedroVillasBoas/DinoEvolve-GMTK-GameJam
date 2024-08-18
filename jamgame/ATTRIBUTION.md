@@ -1,18 +1,23 @@
 # Attribution
 ## Collaborators
 
-### Role
-Person 1  
-Person 2  
-[Person w/ Link]()  
+### Devs
+Pedro Vilas Bôas
+Larissa Santos 
 
 
 ## Sourced / Unaffiliated
-### Asset Type
-#### Use Case
-Author: [Name]()  
-Source: [Domain : webpage.html]()  
-License: [License]()
+### Dino Sprite
+#### Player
+Author: [Demching, ScissorMarks]()  
+Source: [Domain : https://demching.itch.io/dino-family]()  
+License: [CC BY 4.0]()
+
+### Dino Sprite
+#### Player
+Author: [Demching, ScissorMarks]()  
+Source: [Domain : https://demching.itch.io/dino-family]()  
+License: [CC BY 4.0]()
 
 
 ## Tools

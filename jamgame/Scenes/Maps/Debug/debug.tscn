@@ -1,10 +1,10 @@
 [gd_scene load_steps=13 format=4 uid="uid://b3leq5oovvusp"]
 
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://scenes/Player/player.tscn" id="1_kwxv2"]
-[ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://Scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
+[ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_uma4w"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="4_wrsir"]
-[ext_resource type="TileSet" uid="uid://bqdh4442csqwy" path="res://Scenes/Resources/TileSets/tresure_hunters_tileset.tres" id="5_gvutl"]
+[ext_resource type="TileSet" uid="uid://bqdh4442csqwy" path="res://scenes/Resources/TileSets/tresure_hunters_tileset.tres" id="5_gvutl"]
 [ext_resource type="Texture2D" uid="uid://bwif8kxmtiv87" path="res://Assets/Items/Collectables/placeholder.png" id="7_flqj0"]
 [ext_resource type="Script" path="res://Scripts/Handlers/collectable_placeholder.gd" id="8_qe6wr"]
 [ext_resource type="Script" path="res://Scripts/GameUi/game_ui.gd" id="9_vidth"]
