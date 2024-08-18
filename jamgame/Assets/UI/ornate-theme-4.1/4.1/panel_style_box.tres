@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" load_steps=2 format=3 uid="uid://cc0hts2rfrs3l"]
+
+[ext_resource type="Texture2D" uid="uid://bxsdd6eo4joxe" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate.png" id="1_0bkwk"]
+
+[resource]
+texture = ExtResource("1_0bkwk")
+texture_margin_left = 12.0
+texture_margin_top = 14.0
+texture_margin_right = 12.0
+texture_margin_bottom = 14.0
+region_rect = Rect2(27, 1, 26, 30)

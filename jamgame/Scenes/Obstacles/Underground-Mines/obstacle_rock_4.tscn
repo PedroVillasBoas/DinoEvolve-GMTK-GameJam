@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl2ysm2wdg5n8"]
+
+[ext_resource type="Texture2D" uid="uid://cnnehdiroy1gj" path="res://Assets/Obstacles/Underground-Mines/Sprite-0021.png" id="1_s5ld8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
+size = Vector2(16, 10)
+
+[node name="Obstacle_Rock_4" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 41
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -6)
+texture = ExtResource("1_s5ld8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -5)
+shape = SubResource("RectangleShape2D_jnu2g")

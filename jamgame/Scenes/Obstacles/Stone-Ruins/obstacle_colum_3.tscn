@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://bsrge4klgthi5"]
+
+[ext_resource type="Texture2D" uid="uid://o37nu84lm4jk" path="res://Assets/Obstacles/Stone-Ruins/Sprite-0003.png" id="1_34crq"]
+[ext_resource type="Texture2D" uid="uid://bqdq7uski8o3l" path="res://Assets/Obstacles/Stone-Ruins/Sprite-0007.png" id="2_mjplv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
+size = Vector2(16.5, 41)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w63sf"]
+size = Vector2(26, 41.55)
+
+[node name="Obstacle_Colum_3" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 41
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -115)
+scale = Vector2(5, 5)
+texture = ExtResource("1_34crq")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(-97, -113)
+scale = Vector2(5, 5)
+texture = ExtResource("2_mjplv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, -103)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_jnu2g")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-33, -104.125)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_w63sf")

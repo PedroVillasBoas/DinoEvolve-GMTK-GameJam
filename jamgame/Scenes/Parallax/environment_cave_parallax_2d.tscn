@@ -20,6 +20,7 @@ centered = false
 [node name="Moon" type="Parallax2D" parent="."]
 scroll_scale = Vector2(0.1, 1)
 scroll_offset = Vector2(-100, -40)
+autoscroll = Vector2(-50, 0)
 
 [node name="Moon" type="Sprite2D" parent="Moon"]
 position = Vector2(581, 117)
@@ -31,6 +32,7 @@ centered = false
 scroll_scale = Vector2(0.3, 1)
 scroll_offset = Vector2(-100, -202)
 repeat_size = Vector2(2070, 0)
+autoscroll = Vector2(-250, 0)
 
 [node name="Stars" type="Sprite2D" parent="Stars"]
 scale = Vector2(4.5, 4.5)
@@ -41,6 +43,7 @@ centered = false
 scroll_scale = Vector2(0.6, 1)
 scroll_offset = Vector2(-100, -202)
 repeat_size = Vector2(2160, 0)
+autoscroll = Vector2(-500, 0)
 
 [node name="CaveBack" type="Sprite2D" parent="CaveBack"]
 scale = Vector2(4.5, 4.5)
@@ -52,6 +55,7 @@ z_index = 1
 scroll_scale = Vector2(0.9, 1)
 scroll_offset = Vector2(-100, -40)
 repeat_size = Vector2(2160, 1215)
+autoscroll = Vector2(-700, 0)
 
 [node name="CaveFront" type="Sprite2D" parent="CaveFront"]
 scale = Vector2(4.5, 4.5)

@@ -33,6 +33,11 @@ mouse_cursor/custom_image="res://Assets/UI/Cursor/Kenney-Cursor/default.png"
 
 enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res://addons/maaacks_music_controller/plugin.cfg", "res://addons/maaacks_ui_sound_controller/plugin.cfg", "res://addons/phantom_camera/plugin.cfg", "res://addons/post_processing/plugin.cfg", "res://addons/simple-gui-transitions/plugin.cfg")
 
+[global_group]
+
+Player="Player Group"
+Obstacle="Obstacle Group"
+
 [gui_transitions]
 
 config/default/auto_start=true
@@ -70,9 +75,11 @@ shoot={
 [layer_names]
 
 2d_physics/layer_1="Player"
+2d_physics/layer_2="Collectable"
 2d_physics/layer_3="Obstacle"
 2d_physics/layer_4="Ground"
 2d_physics/layer_5="Props"
+2d_physics/layer_6="Destroyer"
 2d_physics/layer_8="WorldBoundary"
 
 [maaacks_credits_scene]

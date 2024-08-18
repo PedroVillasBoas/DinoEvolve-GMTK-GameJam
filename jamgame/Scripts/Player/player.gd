@@ -9,6 +9,7 @@ var is_dead : bool = false
 var score : int = 0
 
 signal dead
+signal collectable
 
 func _physics_process(delta: float) -> void:
 	# Player is Jumping

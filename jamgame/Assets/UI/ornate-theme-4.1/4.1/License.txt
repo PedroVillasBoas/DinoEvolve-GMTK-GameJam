@@ -1,0 +1,7 @@
+This work is licensed under Attribution 4.0 International (CC BY 4.0)
+
+Made by azagaya
+
+Changed default font from theme to The leah Fat Font.
+
+https://azagaya.itch.io/ornate-theme

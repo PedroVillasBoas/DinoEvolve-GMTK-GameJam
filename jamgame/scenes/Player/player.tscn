@@ -4,12 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://pwxyrwpunsum" path="res://Scenes/Player/Dinos/Female/loki_female.tscn" id="2_gtcjt"]
 [ext_resource type="PackedScene" uid="uid://cub41qvm3xf3x" path="res://Scenes/Player/Chicken/chicken.tscn" id="3_bmc1r"]
 
-[node name="Player" type="CharacterBody2D"]
-collision_mask = 136
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_mask = 140
 script = ExtResource("1_tr1xp")
 
 [node name="LokiFemale" parent="." instance=ExtResource("2_gtcjt")]
-script = null
 
 [node name="Chicken" parent="." instance=ExtResource("3_bmc1r")]
 visible = false

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="1_hvn15"]
 [ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_xbogd"]
 [ext_resource type="Texture2D" uid="uid://5bkq314h48ly" path="res://Assets/Characters/Player/Dino-Family/female/loki/egg/hatch.png" id="4_y1nr7"]
-[ext_resource type="PackedScene" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_swdf3"]
+[ext_resource type="PackedScene" uid="uid://4jistgv25la3" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_swdf3"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1uef"]
 radius = 49.0
@@ -154,7 +154,7 @@ animated_sprite = NodePath("AnimatedSprite2D")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(10, 10)
 sprite_frames = SubResource("SpriteFrames_e7xms")
-animation = &"movement"
+animation = &"spawn"
 autoplay = "movement"
 
 [node name="Dino_Collision_Handler" parent="." instance=ExtResource("6_swdf3")]

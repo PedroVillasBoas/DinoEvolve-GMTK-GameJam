@@ -1,0 +1,73 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5fqn7mxyb2fq"]
+
+[ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_upn5d"]
+[ext_resource type="Texture2D" uid="uid://cgofefdhpobgi" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/3 Item Holder/1.png" id="2_2dpwq"]
+[ext_resource type="Texture2D" uid="uid://bgnotdf0jwq78" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/9 Rewards/2.png" id="2_nhsuo"]
+[ext_resource type="Script" path="res://Scripts/GameUi/score_handler.gd" id="2_v5nvo"]
+
+[node name="Score_Handler" type="Control" node_paths=PackedStringArray("score_rich_text", "collectables_rich_text")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_upn5d")
+script = ExtResource("2_v5nvo")
+score_rich_text = NodePath("Score/ScoreText")
+collectables_rich_text = NodePath("Collectables/CollectablesText")
+
+[node name="Collectables" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(592, 144)
+layout_mode = 0
+offset_top = 95.0
+offset_right = 592.0
+offset_bottom = 239.0
+texture = ExtResource("2_2dpwq")
+
+[node name="CollectablesText" type="RichTextLabel" parent="Collectables"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -25.0
+offset_right = 250.0
+offset_bottom = 19.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.686275, 0.6, 0.427451, 1)
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "Artifacts: 00000000000"
+fit_content = true
+
+[node name="Score" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(416, 144)
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_nhsuo")
+
+[node name="ScoreText" type="RichTextLabel" parent="Score"]
+custom_minimum_size = Vector2(310, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -155.0
+offset_top = -20.0
+offset_right = 155.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.685354, 0.598517, 0.427445, 1)
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "Score: [shake rate=40 level=10 connected=0]000000[/shake]"
+fit_content = true

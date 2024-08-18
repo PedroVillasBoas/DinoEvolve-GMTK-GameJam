@@ -11,13 +11,13 @@ var anim_finished : bool = false
 
 func _ready() -> void:
 	animated_sprite.connect("animation_finished", Callable(self, "_on_animation_finished"))
-	dino_collision_handler.connect("area_entered", Callable(self, "_on_dino_collision_handler_area_entered"))
+	player.connect("dead", Callable(self, "_on_dead"))
 
 func _process(_delta: float) -> void:
 	if !anim_finished:
 		spawn_dino()
 	else:
-		if !player.is_dead:
+		if !player.is_dead and !player.is_chicken:
 			handle_animation()
 
 func handle_animation() -> void:
@@ -34,7 +34,5 @@ func _on_animation_finished() -> void:
 		anim_finished = true
 		player.can_move = true
 
-
-func _on_dino_collision_handler_area_entered(area: Area2D) -> void:
-	if area.is_in_group("Obstacle"):
-		player.dead.emit()
+func _on_dead():
+	animated_sprite.play("dead")

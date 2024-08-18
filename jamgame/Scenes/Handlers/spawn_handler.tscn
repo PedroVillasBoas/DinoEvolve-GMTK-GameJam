@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://1254y8fb5ybk"]
+
+[ext_resource type="Script" path="res://Scripts/Handlers/spawn_handler.gd" id="1_g4svh"]
+
+[node name="Spawn_Handler" type="Node"]
+script = ExtResource("1_g4svh")

@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://cxdvck68hjjj8"]
+
+[ext_resource type="Shader" path="res://Shaders/item_highlight.gdshader" id="1_ca5oc"]
+[ext_resource type="Script" path="res://Scripts/Collectable/collectable.gd" id="1_guqas"]
+[ext_resource type="Texture2D" uid="uid://bsac24lxkrube" path="res://Assets/Items/Collectables/Golden Skull/01.png" id="2_3ej0a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_6ralc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pxqbx"]
+shader = ExtResource("1_ca5oc")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 1.5
+shader_parameter/highlight_speed = 3.0
+shader_parameter/highlight_width = 30.0
+
+[node name="Skull_Collectable" type="RigidBody2D"]
+gravity_scale = 0.0
+
+[node name="Skull_Collectable" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("1_guqas")
+move_speed = 400.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Skull_Collectable"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_6ralc")
+
+[node name="Sprite2D" type="Sprite2D" parent="Skull_Collectable"]
+material = SubResource("ShaderMaterial_pxqbx")
+position = Vector2(-3, -16.6667)
+scale = Vector2(4, 4)
+texture = ExtResource("2_3ej0a")
