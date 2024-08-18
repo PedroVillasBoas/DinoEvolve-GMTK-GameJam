@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://p8h3ec6d73y0"
-path="res://.godot/imported/Poison Cloud-Sheet.png-03e1d66bc5848322694f797f0791627c.ctex"
+uid="uid://deyj0lvgmhydm"
+path="res://.godot/imported/PixelStarshipsPackage_Asteroids_01.png-5c65755e42bbad12fb7e4699a93dae3c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/Obstacles/Particles/Poison Cloud-Sheet.png"
-dest_files=["res://.godot/imported/Poison Cloud-Sheet.png-03e1d66bc5848322694f797f0791627c.ctex"]
+source_file="res://Assets/Obstacles/Asteroids/PixelStarshipsPackage_Asteroids_01.png"
+dest_files=["res://.godot/imported/PixelStarshipsPackage_Asteroids_01.png-5c65755e42bbad12fb7e4699a93dae3c.ctex"]
 
 [params]
 

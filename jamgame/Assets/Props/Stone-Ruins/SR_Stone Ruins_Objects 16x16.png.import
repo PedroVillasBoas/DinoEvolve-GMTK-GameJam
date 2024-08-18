@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdpd3sk4gk2fr"
-path="res://.godot/imported/ShootingStar_05.png-8983955396a02b816222185d2214afa1.ctex"
+uid="uid://c5ec7crpy5x5"
+path="res://.godot/imported/SR_Stone Ruins_Objects 16x16.png-7a90fb920822014f07e6b6d69c3dc588.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Props/ShootingStar/ShootingStar_05.png"
-dest_files=["res://.godot/imported/ShootingStar_05.png-8983955396a02b816222185d2214afa1.ctex"]
+source_file="res://Assets/Props/Stone-Ruins/SR_Stone Ruins_Objects 16x16.png"
+dest_files=["res://.godot/imported/SR_Stone Ruins_Objects 16x16.png-7a90fb920822014f07e6b6d69c3dc588.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://k8m5oj7b6fis"
-path="res://.godot/imported/ShootingStar_02.png-fad0e6010d868c78c201a11499d97c2a.ctex"
+uid="uid://b0kq8q6gyf4pr"
+path="res://.godot/imported/Spikes.png-b126adac34756aa85da6fb8c5f2ead34.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Props/ShootingStar/ShootingStar_02.png"
-dest_files=["res://.godot/imported/ShootingStar_02.png-fad0e6010d868c78c201a11499d97c2a.ctex"]
+source_file="res://Assets/Obstacles/Spikes/Spikes.png"
+dest_files=["res://.godot/imported/Spikes.png-b126adac34756aa85da6fb8c5f2ead34.ctex"]
 
 [params]
 

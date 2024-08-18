@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dm2gtb8uycvvx"
-path="res://.godot/imported/ShootingStar_04.png-ca18754a75c2b50b2630f539b1de208e.ctex"
+uid="uid://dme27it3r6yf5"
+path="res://.godot/imported/Fire+Sparks-Sheet.png-833f0ae86a64140b8e4979f802a89a2e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Props/ShootingStar/ShootingStar_04.png"
-dest_files=["res://.godot/imported/ShootingStar_04.png-ca18754a75c2b50b2630f539b1de208e.ctex"]
+source_file="res://Assets/Obstacles/Particles/Fire+Sparks-Sheet.png"
+dest_files=["res://.godot/imported/Fire+Sparks-Sheet.png-833f0ae86a64140b8e4979f802a89a2e.ctex"]
 
 [params]
 

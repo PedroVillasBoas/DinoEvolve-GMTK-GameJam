@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cufumkab3j151"
-path="res://.godot/imported/ShootingStar_03.png-cbcb2acea4cab4a396eb1a52684bc488.ctex"
+uid="uid://ggn2r37hkwyk"
+path="res://.godot/imported/UM_Objects 16x16.png-35b6ef378f66b2b3b2b1451e7be70601.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Props/ShootingStar/ShootingStar_03.png"
-dest_files=["res://.godot/imported/ShootingStar_03.png-cbcb2acea4cab4a396eb1a52684bc488.ctex"]
+source_file="res://Assets/Props/Underground-Mine/UM_Objects 16x16.png"
+dest_files=["res://.godot/imported/UM_Objects 16x16.png-35b6ef378f66b2b3b2b1451e7be70601.ctex"]
 
 [params]
 

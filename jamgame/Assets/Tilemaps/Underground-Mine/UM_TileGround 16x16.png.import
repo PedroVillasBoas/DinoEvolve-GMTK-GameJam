@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deyj0lvgmhydm"
-path="res://.godot/imported/PixelStarshipsPackage_Asteroids_01.png-dab40204dfd409ad9da67347d76673bd.ctex"
+uid="uid://cgpwr2n7sp16k"
+path="res://.godot/imported/UM_TileGround 16x16.png-b5147a0fdb0024c1f7a474c6fa99fb86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/Obstacles/Asteroids/PixelStarshipsPackage_Asteroids_01.png"
-dest_files=["res://.godot/imported/PixelStarshipsPackage_Asteroids_01.png-dab40204dfd409ad9da67347d76673bd.ctex"]
+source_file="res://Assets/Tilemaps/Underground-Mine/UM_TileGround 16x16.png"
+dest_files=["res://.godot/imported/UM_TileGround 16x16.png-b5147a0fdb0024c1f7a474c6fa99fb86.ctex"]
 
 [params]
 

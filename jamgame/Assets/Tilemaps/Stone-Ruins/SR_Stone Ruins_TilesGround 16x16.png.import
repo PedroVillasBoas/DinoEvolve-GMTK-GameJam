@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dme27it3r6yf5"
-path="res://.godot/imported/Fire+Sparks-Sheet.png-17005662d62e2bf15ce403645b02ca39.ctex"
+uid="uid://dlwylpo22xidy"
+path="res://.godot/imported/SR_Stone Ruins_TilesGround 16x16.png-4cc9d00b427e7750228ea77c2bf4abfa.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Items/Obstacles/Particles/Fire+Sparks-Sheet.png"
-dest_files=["res://.godot/imported/Fire+Sparks-Sheet.png-17005662d62e2bf15ce403645b02ca39.ctex"]
+source_file="res://Assets/Tilemaps/Stone-Ruins/SR_Stone Ruins_TilesGround 16x16.png"
+dest_files=["res://.godot/imported/SR_Stone Ruins_TilesGround 16x16.png-4cc9d00b427e7750228ea77c2bf4abfa.ctex"]
 
 [params]
 

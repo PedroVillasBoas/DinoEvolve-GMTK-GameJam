@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfwoh0ktf3sg7"
-path="res://.godot/imported/ShootingStar_07.png-64e00356e34daed3b0ad4a2189938256.ctex"
+uid="uid://p8h3ec6d73y0"
+path="res://.godot/imported/Poison Cloud-Sheet.png-81c2a57396afca89944d88d55a0b8528.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Props/ShootingStar/ShootingStar_07.png"
-dest_files=["res://.godot/imported/ShootingStar_07.png-64e00356e34daed3b0ad4a2189938256.ctex"]
+source_file="res://Assets/Obstacles/Particles/Poison Cloud-Sheet.png"
+dest_files=["res://.godot/imported/Poison Cloud-Sheet.png-81c2a57396afca89944d88d55a0b8528.ctex"]
 
 [params]
 
