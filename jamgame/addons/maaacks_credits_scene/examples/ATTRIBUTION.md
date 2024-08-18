@@ -1,19 +1,24 @@
 # Attribution
 ## Collaborators
 
-### Role
-Person 1  
-Person 2  
-[Person w/ Link]()  
+### Devs
+Pedro Vilas Bôas
+Larissa Sobrinho Santos
 
 ISSO É UM TESTE!
 
 ## Sourced / Unaffiliated
-### Asset Type
-#### Use Case
-Author: [Name]()  
-Source: [Domain : webpage.html]()  
-License: [License]()
+### Dino Sprite
+#### Player
+Author: [Demching, ScissorMarks]()  
+Source: [Domain : https://demching.itch.io/dino-family]()  
+License: [CC BY 4.0]()
+
+### Chicken Sprite
+#### Player
+Author: [Vmiinv]()  
+Source: [Domain : https://vmiinv.itch.io/chickenpack-asset]()  
+License: [No license listed]()
 
 
 ## Tools
