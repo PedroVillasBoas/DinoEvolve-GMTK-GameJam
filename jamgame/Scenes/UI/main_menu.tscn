@@ -36,3 +36,4 @@ layout_mode = 1
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_r34j5")
 autoplay = true
+parameters/looping = false
