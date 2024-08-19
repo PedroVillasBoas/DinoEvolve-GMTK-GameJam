@@ -1,6 +1,6 @@
 [gd_scene load_steps=14 format=3 uid="uid://b3leq5oovvusp"]
 
-[ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://scenes/Player/player.tscn" id="1_kwxv2"]
+[ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="1_kwxv2"]
 [ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://Scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
 [ext_resource type="PackedScene" uid="uid://cxpq74r6d7tal" path="res://Scenes/Parallax/stone_ruins.tscn" id="1_po5dw"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="3_uma4w"]
@@ -29,7 +29,6 @@ load_path = "res://.godot/imported/UI books & more.png-7e82a41a0b66bbb5a1aea53c1
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_po5dw")]
 
 [node name="EnvironmentCaveParallax2D" parent="." instance=ExtResource("1_l0qbe")]
-visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1

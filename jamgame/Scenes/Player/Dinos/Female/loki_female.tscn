@@ -1,78 +1,78 @@
 [gd_scene load_steps=25 format=3 uid="uid://pwxyrwpunsum"]
 
-[ext_resource type="Script" path="res://Scripts/Handlers/animation_handler.gd" id="1_25mn7"]
-[ext_resource type="Texture2D" uid="uid://hqbyasd7n8tt" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/jump.png" id="1_82f5q"]
-[ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="1_hvn15"]
-[ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="1_xbogd"]
-[ext_resource type="Texture2D" uid="uid://5bkq314h48ly" path="res://Assets/Characters/Player/Dino-Family/female/loki/egg/hatch.png" id="4_y1nr7"]
-[ext_resource type="PackedScene" uid="uid://4jistgv25la3" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_swdf3"]
+[ext_resource type="Script" path="res://Scripts/Handlers/animation_handler.gd" id="1_i5r75"]
+[ext_resource type="Texture2D" uid="uid://bcaxxkpq4xu4g" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/dead.png" id="2_cbcgt"]
+[ext_resource type="Texture2D" uid="uid://hqbyasd7n8tt" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/jump.png" id="3_x4dva"]
+[ext_resource type="Texture2D" uid="uid://d4dxkrxljf2r0" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/move.png" id="4_ej5gu"]
+[ext_resource type="Texture2D" uid="uid://5bkq314h48ly" path="res://Assets/Characters/Player/Dino-Family/female/loki/egg/hatch.png" id="5_eus2l"]
+[ext_resource type="PackedScene" uid="uid://4jistgv25la3" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_bkh7c"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_k1uef"]
 radius = 49.0
 height = 154.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qcx3u"]
-atlas = ExtResource("1_hvn15")
+atlas = ExtResource("2_cbcgt")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6p2ta"]
-atlas = ExtResource("1_hvn15")
+atlas = ExtResource("2_cbcgt")
 region = Rect2(24, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ifm85"]
-atlas = ExtResource("1_hvn15")
+atlas = ExtResource("2_cbcgt")
 region = Rect2(48, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5lrfn"]
-atlas = ExtResource("1_hvn15")
+atlas = ExtResource("2_cbcgt")
 region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gv7cg"]
-atlas = ExtResource("1_hvn15")
+atlas = ExtResource("2_cbcgt")
 region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hnigx"]
-atlas = ExtResource("1_82f5q")
+atlas = ExtResource("3_x4dva")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_nmcf0"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_igg4f"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(24, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2w3l"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(48, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hfij0"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuf8g"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(96, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_u8406"]
-atlas = ExtResource("1_xbogd")
+atlas = ExtResource("4_ej5gu")
 region = Rect2(120, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_oq1a7"]
-atlas = ExtResource("4_y1nr7")
+atlas = ExtResource("5_eus2l")
 region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_odc72"]
-atlas = ExtResource("4_y1nr7")
+atlas = ExtResource("5_eus2l")
 region = Rect2(24, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3dtx7"]
-atlas = ExtResource("4_y1nr7")
+atlas = ExtResource("5_eus2l")
 region = Rect2(48, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qeqk6"]
-atlas = ExtResource("4_y1nr7")
+atlas = ExtResource("5_eus2l")
 region = Rect2(72, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_e7xms"]
@@ -148,7 +148,7 @@ animations = [{
 
 [node name="LokiFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite")]
 shape = SubResource("CapsuleShape2D_k1uef")
-script = ExtResource("1_25mn7")
+script = ExtResource("1_i5r75")
 animated_sprite = NodePath("AnimatedSprite2D")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -157,4 +157,4 @@ sprite_frames = SubResource("SpriteFrames_e7xms")
 animation = &"spawn"
 autoplay = "movement"
 
-[node name="Dino_Collision_Handler" parent="." instance=ExtResource("6_swdf3")]
+[node name="Dino_Collision_Handler" parent="." instance=ExtResource("6_bkh7c")]
