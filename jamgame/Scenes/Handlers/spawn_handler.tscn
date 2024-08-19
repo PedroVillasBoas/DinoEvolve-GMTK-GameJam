@@ -2,5 +2,16 @@
 
 [ext_resource type="Script" path="res://Scripts/Handlers/spawn_handler.gd" id="1_g4svh"]
 
-[node name="Spawn_Handler" type="Node"]
+[node name="Spawn_Handler" type="Node" node_paths=PackedStringArray("dino_spawn_timer", "chicken_spawn_timer")]
 script = ExtResource("1_g4svh")
+dino_spawn_timer = NodePath("Dino_Spawn_Obstacle_Timer")
+chicken_spawn_timer = NodePath("Chicken_Spawn_Obstacle_Timer")
+
+[node name="Dino_Spawn_Obstacle_Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Chicken_Spawn_Obstacle_Timer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="Dino_Spawn_Obstacle_Timer" to="." method="_on_dino_spawn_obstacle_timer_timeout"]
+[connection signal="timeout" from="Chicken_Spawn_Obstacle_Timer" to="." method="_on_chicken_spawn_obstacle_timer_timeout"]

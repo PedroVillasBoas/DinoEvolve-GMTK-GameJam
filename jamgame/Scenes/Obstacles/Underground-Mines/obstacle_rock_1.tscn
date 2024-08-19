@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8a6o14sjwbme"]
+[gd_scene load_steps=6 format=3 uid="uid://b8a6o14sjwbme"]
 
 [ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_cn88b"]
 [ext_resource type="Texture2D" uid="uid://b1n2q3jrbf53l" path="res://Assets/Obstacles/Underground-Mines/Sprite-0022.png" id="1_x081a"]
+[ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="2_nbyal"]
 [ext_resource type="PackedScene" uid="uid://cucj16ritdjo6" path="res://Scenes/Obstacles/obstacle_collision.tscn" id="3_25x7x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
@@ -15,6 +16,7 @@ lock_rotation = true
 script = ExtResource("1_cn88b")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("2_nbyal")
 position = Vector2(0, -61.5)
 scale = Vector2(5, 5)
 texture = ExtResource("1_x081a")

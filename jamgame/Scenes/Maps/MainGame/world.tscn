@@ -1,13 +1,15 @@
-[gd_scene load_steps=10 format=3 uid="uid://dn6hluvk3ggax"]
+[gd_scene load_steps=12 format=3 uid="uid://dn6hluvk3ggax"]
 
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="3_2pfoa"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_4bamc"]
+[ext_resource type="PackedScene" uid="uid://4ioledvmu50h" path="res://Scenes/Handlers/destroyer_boundary.tscn" id="5_2yi0w"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="5_16gvs"]
 [ext_resource type="PackedScene" uid="uid://btou24grt31ju" path="res://Scenes/Maps/Environments/envionment_envionment_cave.tscn" id="6_biyr1"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="6_trwrg"]
 [ext_resource type="PackedScene" uid="uid://dg7oro8uwr2s4" path="res://Scenes/Maps/Environments/envionment_stone_ruins.tscn" id="7_h8yey"]
 [ext_resource type="PackedScene" uid="uid://drapt8fa0eq2l" path="res://Scenes/Handlers/world_boundary.tscn" id="7_ucdcu"]
 [ext_resource type="PackedScene" uid="uid://c5fqn7mxyb2fq" path="res://Scenes/Handlers/score_handler.tscn" id="8_006y1"]
+[ext_resource type="PackedScene" uid="uid://1254y8fb5ybk" path="res://Scenes/Handlers/spawn_handler.tscn" id="9_0g4ce"]
 
 [sub_resource type="Resource" id="Resource_itjnl"]
 script = ExtResource("6_trwrg")
@@ -36,25 +38,42 @@ follow_damping_value = Vector2(0.2, 0.2)
 
 [node name="Boundaries" type="Node" parent="."]
 
-[node name="World_Boundary" parent="Boundaries" instance=ExtResource("7_ucdcu")]
+[node name="World" type="Node" parent="Boundaries"]
+
+[node name="World_Boundary" parent="Boundaries/World" instance=ExtResource("7_ucdcu")]
 position = Vector2(0, 651)
 rotation = 1.5708
 
-[node name="World_Boundary2" parent="Boundaries" instance=ExtResource("7_ucdcu")]
+[node name="World_Boundary2" parent="Boundaries/World" instance=ExtResource("7_ucdcu")]
 position = Vector2(1920, 651)
 rotation = -1.5708
 
-[node name="World_Boundary3" parent="Boundaries" instance=ExtResource("7_ucdcu")]
+[node name="World_Boundary3" parent="Boundaries/World" instance=ExtResource("7_ucdcu")]
 position = Vector2(887, 0)
 rotation = -3.14159
+
+[node name="Destroyer" type="Node" parent="Boundaries"]
+
+[node name="Destroyer_Boundary" parent="Boundaries/Destroyer" instance=ExtResource("5_2yi0w")]
+position = Vector2(-1140, 0)
+rotation = 1.5708
 
 [node name="Spawns" type="Node" parent="."]
 
 [node name="TopSpawn" type="Node2D" parent="Spawns"]
-position = Vector2(2833, 0)
+position = Vector2(3678, 0)
 
 [node name="GroundSpawn" type="Node2D" parent="Spawns"]
-position = Vector2(2833, 910)
+position = Vector2(3678, 921)
+
+[node name="ProjectileSpawn" type="Node2D" parent="Spawns"]
+position = Vector2(3678, 169)
+
+[node name="ProjectileSpawn2" type="Node2D" parent="Spawns"]
+position = Vector2(3678, 464)
+
+[node name="ProjectileSpawn3" type="Node2D" parent="Spawns"]
+position = Vector2(3678, 771)
 
 [node name="Envionment_Stone_Ruins" parent="." instance=ExtResource("7_h8yey")]
 
@@ -68,3 +87,10 @@ position = Vector2(793, 802)
 
 [node name="Score_Handler" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("8_006y1")]
 player = NodePath("../../Player")
+
+[node name="Handlers" type="Node" parent="."]
+
+[node name="Spawn_Handler" parent="Handlers" node_paths=PackedStringArray("top_obstacle_spawn_pos", "projectile_spawns_pos", "ground_obstacle_spawn_pos") instance=ExtResource("9_0g4ce")]
+top_obstacle_spawn_pos = NodePath("../../Spawns/TopSpawn")
+projectile_spawns_pos = [NodePath("../../Spawns/ProjectileSpawn"), NodePath("../../Spawns/ProjectileSpawn2"), NodePath("../../Spawns/ProjectileSpawn3")]
+ground_obstacle_spawn_pos = NodePath("../../Spawns/GroundSpawn")

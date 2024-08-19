@@ -1,18 +1,37 @@
-[gd_scene load_steps=3 format=3 uid="uid://cg6ti10nwnlmk"]
+[gd_scene load_steps=6 format=3 uid="uid://cg6ti10nwnlmk"]
 
+[ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="1_3qd3q"]
 [ext_resource type="Texture2D" uid="uid://kefkvu7wayps" path="res://Assets/Obstacles/Underground-Mines/Sprite-0020.png" id="1_jp4mc"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_sskjg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
 size = Vector2(28, 12)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w63sf"]
+size = Vector2(27.2, 10.95)
+
 [node name="Obstacle_Rock_3" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 41
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_sskjg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -8)
+material = ExtResource("1_3qd3q")
+position = Vector2(0, -40)
+scale = Vector2(5, 5)
 texture = ExtResource("1_jp4mc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -6)
+position = Vector2(0, -30)
+scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_jnu2g")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -27.625)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_w63sf")
