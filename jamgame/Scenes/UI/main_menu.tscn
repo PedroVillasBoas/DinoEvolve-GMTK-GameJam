@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ye1fxvqr6v3f"]
+[gd_scene load_steps=5 format=3 uid="uid://ye1fxvqr6v3f"]
 
 [ext_resource type="Texture2D" uid="uid://cqqdyjmx7glfx" path="res://Assets/UI/Logo/logo-dino-evolve-small.png" id="2_2u6y8"]
 [ext_resource type="PackedScene" uid="uid://dkvpsq8ae0mx4" path="res://Scenes/UI/main_menu_buttons.tscn" id="2_3kehn"]
 [ext_resource type="Texture2D" uid="uid://cwc33feun3qc5" path="res://Assets/Background/Mondstadt/windrise-background-4k.png" id="2_bcd4g"]
+[ext_resource type="AudioStream" uid="uid://bvdeu2b7tyejk" path="res://Sound/bit-beats-1-168243.mp3" id="4_r34j5"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -33,4 +34,5 @@ texture = ExtResource("2_2u6y8")
 layout_mode = 1
 
 [node name="MainMenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_r34j5")
 autoplay = true
