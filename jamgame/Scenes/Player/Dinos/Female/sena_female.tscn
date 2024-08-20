@@ -166,9 +166,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="SenaFemale" type="CollisionShape2D"]
+[node name="SenaFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "dino_collision_handler")]
 shape = SubResource("RectangleShape2D_pnene")
 script = ExtResource("1_71iq2")
+animated_sprite = NodePath("AnimatedSprite2D")
+dino_collision_handler = NodePath("Dino_Collision_Handler")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(10, 10)
