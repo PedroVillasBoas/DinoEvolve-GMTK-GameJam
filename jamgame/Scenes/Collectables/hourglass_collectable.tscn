@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://dfpyabor0cm0m"]
+[gd_scene load_steps=6 format=3 uid="uid://dfpyabor0cm0m"]
 
-[node name="HourglassCollectable" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/Collectable/collectable.gd" id="1_ukag3"]
+[ext_resource type="Shader" path="res://Shaders/item_highlight.gdshader" id="2_gtwhm"]
+[ext_resource type="Texture2D" uid="uid://xit2jpww5p32" path="res://Assets/Items/Collectables/Sprite-0003.png" id="3_jouuk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dlefy"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_pvojk"]
+shader = ExtResource("2_gtwhm")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[node name="Hourglass_Collectable" type="RigidBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_ukag3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_dlefy")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_pvojk")
+scale = Vector2(4, 4)
+texture = ExtResource("3_jouuk")

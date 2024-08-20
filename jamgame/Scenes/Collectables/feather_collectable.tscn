@@ -1,15 +1,28 @@
-[gd_scene load_steps=3 format=3 uid="uid://dmumkmt8e5htr"]
+[gd_scene load_steps=6 format=3 uid="uid://dmumkmt8e5htr"]
 
 [ext_resource type="Texture2D" uid="uid://c7dlh43jjc0ku" path="res://Assets/Items/Collectables/Sprite-0001.png" id="1_0cfdi"]
+[ext_resource type="Script" path="res://Scripts/Collectable/collectable.gd" id="1_eyjgq"]
+[ext_resource type="Shader" path="res://Shaders/item_highlight.gdshader" id="2_xqkrd"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_yys71"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_p7p5x"]
+shader = ExtResource("2_xqkrd")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
 
 [node name="Feather_Collectable" type="RigidBody2D"]
 
 [node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_eyjgq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4, 4)
 shape = SubResource("CircleShape2D_yys71")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_p7p5x")
+scale = Vector2(4, 4)
 texture = ExtResource("1_0cfdi")

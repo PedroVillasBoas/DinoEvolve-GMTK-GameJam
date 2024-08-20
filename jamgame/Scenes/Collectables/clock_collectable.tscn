@@ -1,3 +1,28 @@
-[gd_scene format=3 uid="uid://ri1k5sliaikt"]
+[gd_scene load_steps=6 format=3 uid="uid://ri1k5sliaikt"]
 
-[node name="ClockCollectable" type="Node2D"]
+[ext_resource type="Script" path="res://Scripts/Collectable/collectable.gd" id="1_2ad2d"]
+[ext_resource type="Shader" path="res://Shaders/item_highlight.gdshader" id="2_4vi3u"]
+[ext_resource type="Texture2D" uid="uid://u7yf3ronef7l" path="res://Assets/Items/Collectables/Sprite-0002.png" id="3_rgc80"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_nctdn"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_ygob4"]
+shader = ExtResource("2_4vi3u")
+shader_parameter/highlight_color = Color(1, 1, 1, 1)
+shader_parameter/frequency = 0.35
+shader_parameter/highlight_speed = 6.0
+shader_parameter/highlight_width = 15.0
+
+[node name="Clock_Collectable" type="RigidBody2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_2ad2d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+scale = Vector2(4, 4)
+shape = SubResource("CircleShape2D_nctdn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+material = SubResource("ShaderMaterial_ygob4")
+scale = Vector2(4, 4)
+texture = ExtResource("3_rgc80")
