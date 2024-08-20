@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://170l0an4bng2"]
+
+[ext_resource type="Texture2D" uid="uid://rfgcwgpmybij" path="res://Assets/Characters/Player/Chicken/Blucken/BluckenFly-Sheet.png" id="1_tlcfp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5b8c"]
+atlas = ExtResource("1_tlcfp")
+region = Rect2(0, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0cf2n"]
+atlas = ExtResource("1_tlcfp")
+region = Rect2(32, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ml37f"]
+atlas = ExtResource("1_tlcfp")
+region = Rect2(64, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kbwix"]
+atlas = ExtResource("1_tlcfp")
+region = Rect2(96, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ijkyy"]
+atlas = ExtResource("1_tlcfp")
+region = Rect2(128, 0, 32, 21)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5b8c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0cf2n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ml37f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kbwix")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ijkyy")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]

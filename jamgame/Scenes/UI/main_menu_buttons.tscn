@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkvpsq8ae0mx4"]
+[gd_scene load_steps=6 format=3 uid="uid://dkvpsq8ae0mx4"]
 
 [ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_o5a8s"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_uo1m4"]
+[ext_resource type="Script" path="res://Scripts/GameUi/main_menu_buttons.gd" id="2_ve03s"]
 [ext_resource type="Texture2D" uid="uid://cdv52run52vh4" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/8 Shop/1.png" id="3_kvk7b"]
 [ext_resource type="Texture2D" uid="uid://c1ravek8wr5xs" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/6 Player HUD/1.png" id="4_od6gh"]
 
@@ -14,6 +15,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_o5a8s")
+script = ExtResource("2_ve03s")
 
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource("2_uo1m4")

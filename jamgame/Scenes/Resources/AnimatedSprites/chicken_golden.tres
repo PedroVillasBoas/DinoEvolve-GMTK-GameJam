@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" load_steps=7 format=3 uid="uid://cu4rgb1teh8ck"]
+
+[ext_resource type="Texture2D" uid="uid://drmms2antm7js" path="res://Assets/Characters/Player/Chicken/Golden/GoldenChickenFly-Sheet.png" id="1_tt3et"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gg8hb"]
+atlas = ExtResource("1_tt3et")
+region = Rect2(0, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xvtck"]
+atlas = ExtResource("1_tt3et")
+region = Rect2(32, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpnva"]
+atlas = ExtResource("1_tt3et")
+region = Rect2(64, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytjfi"]
+atlas = ExtResource("1_tt3et")
+region = Rect2(96, 0, 32, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_68aah"]
+atlas = ExtResource("1_tt3et")
+region = Rect2(128, 0, 32, 21)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gg8hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xvtck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpnva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytjfi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_68aah")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 10.0
+}]

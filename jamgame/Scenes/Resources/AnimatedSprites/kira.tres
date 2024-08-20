@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://bxwax850a030c"]
+
+[ext_resource type="Texture2D" uid="uid://s1cdtlxa5i38" path="res://Assets/Characters/Player/Dino-Family/male/kira/base/idle.png" id="1_y7h0w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwluq"]
+atlas = ExtResource("1_y7h0w")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3qvpe"]
+atlas = ExtResource("1_y7h0w")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qtuq3"]
+atlas = ExtResource("1_y7h0w")
+region = Rect2(48, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwluq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3qvpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qtuq3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]

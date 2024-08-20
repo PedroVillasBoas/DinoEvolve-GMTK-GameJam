@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://fvdos4j1j5y"]
+
+[ext_resource type="Texture2D" uid="uid://qxm40fpqngaj" path="res://Assets/Characters/Player/Dino-Family/female/loki/base/idle.png" id="1_ykfin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbbaw"]
+atlas = ExtResource("1_ykfin")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rha57"]
+atlas = ExtResource("1_ykfin")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6bue"]
+atlas = ExtResource("1_ykfin")
+region = Rect2(48, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbbaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rha57")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6bue")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]

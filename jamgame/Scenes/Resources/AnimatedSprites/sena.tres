@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://c1xttd165de1a"]
+
+[ext_resource type="Texture2D" uid="uid://davd73bpvf0uj" path="res://Assets/Characters/Player/Dino-Family/female/sena/base/idle.png" id="1_yrh0r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbnn5"]
+atlas = ExtResource("1_yrh0r")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_242k0"]
+atlas = ExtResource("1_yrh0r")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8763b"]
+atlas = ExtResource("1_yrh0r")
+region = Rect2(48, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbnn5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_242k0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8763b")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]

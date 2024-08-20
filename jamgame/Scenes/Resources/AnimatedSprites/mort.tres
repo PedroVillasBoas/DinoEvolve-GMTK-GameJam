@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://b0hunh1b84fud"]
+
+[ext_resource type="Texture2D" uid="uid://bb2r0cx1b10aa" path="res://Assets/Characters/Player/Dino-Family/female/mort/base/idle.png" id="1_mpmfs"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ouvlq"]
+atlas = ExtResource("1_mpmfs")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpppy"]
+atlas = ExtResource("1_mpmfs")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sk0lf"]
+atlas = ExtResource("1_mpmfs")
+region = Rect2(48, 0, 24, 24)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ouvlq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpppy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sk0lf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
