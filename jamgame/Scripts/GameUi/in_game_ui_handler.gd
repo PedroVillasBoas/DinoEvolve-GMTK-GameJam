@@ -22,4 +22,5 @@ func _input(event: InputEvent) -> void:
 		paused = false
 
 func _on_game_over():
-	game_over.show()
+	GuiTransitions.go_to("Game_Over_UI")
+	get_tree().paused = true

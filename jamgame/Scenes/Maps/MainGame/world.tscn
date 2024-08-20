@@ -10,7 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://drapt8fa0eq2l" path="res://Scenes/Handlers/world_boundary.tscn" id="7_ucdcu"]
 [ext_resource type="PackedScene" uid="uid://c5fqn7mxyb2fq" path="res://Scenes/Handlers/score_handler.tscn" id="8_006y1"]
 [ext_resource type="PackedScene" uid="uid://1254y8fb5ybk" path="res://Scenes/Handlers/spawn_handler.tscn" id="9_0g4ce"]
-[ext_resource type="PackedScene" uid="uid://l1ybk450qvt2" path="res://Scenes/UI/in_game_ui_handler.tscn" id="10_v7buq"]
+[ext_resource type="PackedScene" uid="uid://crmvkpm36o3ot" path="res://Scenes/UI/game_over_ui.tscn" id="10_oaiat"]
 [ext_resource type="Script" path="res://Scripts/Props/meteor.gd" id="11_j5jrq"]
 [ext_resource type="Texture2D" uid="uid://bvrssvqh2jsar" path="res://Assets/Props/Asteroids/PNGs/Asteroid 01 - Explode.png" id="12_hvmcx"]
 [ext_resource type="PackedScene" uid="uid://dkas32lfflrki" path="res://Scenes/Handlers/changer_handler.tscn" id="12_ko2yw"]
@@ -302,12 +302,11 @@ position = Vector2(793, 225)
 changer_handler = NodePath("../Handlers/Changer_Handler")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-process_mode = 3
 
 [node name="Score_Handler" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("8_006y1")]
 player = NodePath("../../Player")
 
-[node name="InGame_UI_Handler" parent="CanvasLayer" instance=ExtResource("10_v7buq")]
+[node name="Game_Over_UI" parent="CanvasLayer" instance=ExtResource("10_oaiat")]
 
 [node name="Handlers" type="Node" parent="."]
 
