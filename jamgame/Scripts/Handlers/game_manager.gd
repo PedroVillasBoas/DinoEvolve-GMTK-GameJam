@@ -24,6 +24,8 @@ signal give_skin
 signal give_chicken
 # signal to let everything know to start the game
 signal start_game
+# Signal to let everything know the game ended
+signal game_over
 
 func _ready() -> void:
 	player_dino_skin = player_dino_default_skin
@@ -31,7 +33,14 @@ func _ready() -> void:
 
 # Change scene to game
 func start_button_game():
-	get_tree().change_scene_to_file("res://Scenes/Maps/MainGame/world.tscn")
+	await get_tree().change_scene_to_file("res://Scenes/Maps/MainGame/world.tscn")
+	await get_tree().create_timer(0.3).timeout
+	for child in get_tree().root.get_child(-1).get_children():
+		if child.is_in_group("Player"):
+			player = child
+	give_dino_skin_to_player()
+	give_chicken_to_player()
+	player.connect("dead", Callable(self, "_on_player_dead"))
 
 # Add Child Player Dino Skin In Game
 func give_dino_skin_to_player() -> void:
@@ -53,5 +62,5 @@ func set_player_dino_skin(skin : PackedScene) -> void:
 func set_player_chicken_skin(skin : PackedScene) -> void:
 	player_chicken_skin = skin
 
-func game_over():
-	pass
+func _on_player_dead():
+	emit_signal("game_over")

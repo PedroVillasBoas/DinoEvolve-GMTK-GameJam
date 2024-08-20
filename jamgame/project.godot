@@ -41,6 +41,7 @@ Obstacle="Obstacle Group"
 Destroyer="Destroy obstacles"
 Dino=""
 Chicken=""
+ChangerHandler=""
 
 [gui_transitions]
 

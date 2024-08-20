@@ -1,19 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://l1ybk450qvt2"]
+[gd_scene load_steps=5 format=3 uid="uid://l1ybk450qvt2"]
 
-[ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="1_fwjuo"]
+[ext_resource type="Script" path="res://Scripts/GameUi/in_game_ui_handler.gd" id="1_wue3c"]
 [ext_resource type="PackedScene" uid="uid://cmawie713jc8b" path="res://Scenes/UI/pause_screen_ui.tscn" id="2_6pqlh"]
 [ext_resource type="PackedScene" uid="uid://crmvkpm36o3ot" path="res://Scenes/UI/game_over_ui.tscn" id="3_u0ygw"]
+[ext_resource type="Script" path="res://Scripts/GameUi/game_over_ui.gd" id="3_v3x5m"]
 
 [node name="InGame_UI_Handler" type="Control"]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="GuiTransition" type="Node" parent="."]
-script = ExtResource("1_fwjuo")
+script = ExtResource("1_wue3c")
 
 [node name="Pause_Screen_UI" parent="." instance=ExtResource("2_6pqlh")]
 visible = false
@@ -22,3 +22,4 @@ layout_mode = 1
 [node name="Game_Over_UI" parent="." instance=ExtResource("3_u0ygw")]
 visible = false
 layout_mode = 1
+script = ExtResource("3_v3x5m")

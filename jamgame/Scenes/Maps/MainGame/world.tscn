@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://dn6hluvk3ggax"]
+[gd_scene load_steps=30 format=3 uid="uid://dn6hluvk3ggax"]
 
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="3_2pfoa"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_4bamc"]
@@ -13,6 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://l1ybk450qvt2" path="res://Scenes/UI/in_game_ui_handler.tscn" id="10_v7buq"]
 [ext_resource type="Script" path="res://Scripts/Props/meteor.gd" id="11_j5jrq"]
 [ext_resource type="Texture2D" uid="uid://bvrssvqh2jsar" path="res://Assets/Props/Asteroids/PNGs/Asteroid 01 - Explode.png" id="12_hvmcx"]
+[ext_resource type="PackedScene" uid="uid://dkas32lfflrki" path="res://Scenes/Handlers/changer_handler.tscn" id="12_ko2yw"]
 [ext_resource type="Texture2D" uid="uid://bprb7rt5n2bcp" path="res://Assets/Props/Asteroids/PNGs/Asteroid 01 - Base.png" id="13_r4ab6"]
 [ext_resource type="PackedScene" uid="uid://cxha6maqwekse" path="res://Scenes/VFX/explosion.tscn" id="14_d610e"]
 
@@ -230,13 +231,13 @@ _data = {
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
-position = Vector2(1293, 652)
+position = Vector2(1293, 75)
 
 [node name="PhantomCameraHost" type="Node" parent="Camera2D"]
 script = ExtResource("4_4bamc")
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(1293, 652)
+position = Vector2(1293, 75)
 script = ExtResource("5_16gvs")
 follow_mode = 5
 follow_target = NodePath("../Player")
@@ -296,8 +297,9 @@ visible = false
 [node name="Envionment_Envionment_Cave" parent="." instance=ExtResource("6_biyr1")]
 visible = false
 
-[node name="Player" parent="." instance=ExtResource("3_2pfoa")]
-position = Vector2(793, 802)
+[node name="Player" parent="." node_paths=PackedStringArray("changer_handler") instance=ExtResource("3_2pfoa")]
+position = Vector2(793, 225)
+changer_handler = NodePath("../Handlers/Changer_Handler")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -313,9 +315,13 @@ top_obstacle_spawn_pos = NodePath("../../Spawns/TopSpawn")
 projectile_spawns_pos = [NodePath("../../Spawns/ProjectileSpawn"), NodePath("../../Spawns/ProjectileSpawn2"), NodePath("../../Spawns/ProjectileSpawn3"), NodePath("../../Spawns/ProjectileSpawn4"), NodePath("../../Spawns/ProjectileSpawn5")]
 ground_obstacle_spawn_pos = NodePath("../../Spawns/GroundSpawn")
 
+[node name="Changer_Handler" parent="Handlers" node_paths=PackedStringArray("score_handler", "spawn_handler") instance=ExtResource("12_ko2yw")]
+score_handler = NodePath("../../CanvasLayer/Score_Handler")
+spawn_handler = NodePath("../Spawn_Handler")
+
 [node name="Meteor" type="Node" parent="."]
 
-[node name="Meteor" type="Node2D" parent="Meteor" node_paths=PackedStringArray("animated_sprite", "vfx", "animation_player")]
+[node name="Meteor" type="Node2D" parent="Meteor" node_paths=PackedStringArray("animated_sprite", "vfx", "animation_player", "changer_handler")]
 process_mode = 3
 visible = false
 position = Vector2(1837, 0)
@@ -323,6 +329,7 @@ script = ExtResource("11_j5jrq")
 animated_sprite = NodePath("AnimatedSprite2D")
 vfx = NodePath("Explosion")
 animation_player = NodePath("AnimationPlayer")
+changer_handler = NodePath("../../Handlers/Changer_Handler")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meteor/Meteor"]
 sprite_frames = SubResource("SpriteFrames_h4axg")

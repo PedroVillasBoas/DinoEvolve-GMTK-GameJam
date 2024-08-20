@@ -19,6 +19,7 @@ size = Vector2(33, 46)
 size = Vector2(15.6, 23.1)
 
 [node name="Obstacle_Totem_1" type="RigidBody2D"]
+z_index = 1
 collision_layer = 4
 collision_mask = 40
 gravity_scale = 0.0

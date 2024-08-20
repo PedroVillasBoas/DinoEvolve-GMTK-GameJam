@@ -11,6 +11,7 @@ size = Vector2(28, 12)
 size = Vector2(27.2, 10.95)
 
 [node name="Obstacle_Rock_3" type="RigidBody2D"]
+z_index = 1
 collision_layer = 4
 collision_mask = 41
 gravity_scale = 0.0

@@ -11,6 +11,7 @@ size = Vector2(16.5, 41)
 size = Vector2(26, 41.55)
 
 [node name="Obstacle_Colum_3" type="RigidBody2D"]
+z_index = 1
 collision_layer = 4
 collision_mask = 41
 

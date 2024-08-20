@@ -19,6 +19,7 @@ size = Vector2(118, 10.3925)
 size = Vector2(116.4, 25.75)
 
 [node name="Obstacle_Top_Spikes_1" type="RigidBody2D"]
+z_index = 1
 collision_layer = 4
 collision_mask = 41
 gravity_scale = 0.0

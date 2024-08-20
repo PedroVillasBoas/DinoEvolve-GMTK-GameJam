@@ -11,6 +11,7 @@ size = Vector2(32.5, 17.5)
 size = Vector2(13.8, 10.8625)
 
 [node name="Obstacle_Totem_4" type="RigidBody2D"]
+z_index = 1
 gravity_scale = 0.0
 lock_rotation = true
 script = ExtResource("1_wt5xc")

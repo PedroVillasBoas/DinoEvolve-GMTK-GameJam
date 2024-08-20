@@ -9,23 +9,21 @@ var can_move : bool = true
 var is_chicken : bool = false
 var is_dead : bool = false
 
-var changer_handler : Changer_Handler
+@export var changer_handler : Changer_Handler
 
-var dino_skin : Animation_Handler
-var chicken_skin : Animation_Handler
+var dino_skin
+var chicken_skin
 
 signal dead
 signal collectable
 
 func _ready() -> void:
-	get_skins()
-	
-	for child in get_tree().current_scene.get_children(true):
-		if child.name == "Changer_Handler":
-			changer_handler = child
-	
+	await get_tree().create_timer(1).timeout
 	changer_handler.connect("chicken_time", Callable(self, "_on_chicken_time"))
 	changer_handler.connect("dino_time", Callable(self, "_on_dino_time"))
+	get_skins()
+	chicken_skin.hide()
+	dino_skin.show()
 
 func _physics_process(delta: float) -> void:
 	# Player is Jumping
