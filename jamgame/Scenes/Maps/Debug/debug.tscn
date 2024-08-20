@@ -1,5 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://b3leq5oovvusp"]
+[gd_scene load_steps=15 format=3 uid="uid://b3leq5oovvusp"]
 
+[ext_resource type="PackedScene" uid="uid://dlsmfbp4kwq31" path="res://Scenes/Parallax/swamp_game_parallax.tscn" id="1_im8mt"]
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="1_kwxv2"]
 [ext_resource type="PackedScene" uid="uid://c1leo5rgeuj1n" path="res://Scenes/Parallax/environment_cave_parallax_2d.tscn" id="1_l0qbe"]
 [ext_resource type="PackedScene" uid="uid://cxpq74r6d7tal" path="res://Scenes/Parallax/stone_ruins.tscn" id="1_po5dw"]
@@ -26,16 +27,20 @@ load_path = "res://.godot/imported/UI books & more.png-7e82a41a0b66bbb5a1aea53c1
 
 [node name="Debug" type="Node2D"]
 
+[node name="SwampGameParallax" type="Node2D" parent="." instance=ExtResource("1_im8mt")]
+
 [node name="ParallaxBackground" parent="." instance=ExtResource("1_po5dw")]
+visible = false
 
 [node name="EnvironmentCaveParallax2D" parent="." instance=ExtResource("1_l0qbe")]
+visible = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 physics_interpolation_mode = 1
 position = Vector2(1449, 666)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(1449, 666)
+position = Vector2(1183, 759)
 script = ExtResource("3_uma4w")
 follow_mode = 5
 follow_target = NodePath("../Player")
@@ -51,7 +56,7 @@ position = Vector2(703, 895)
 tile_set = ExtResource("5_6sd3h")
 
 [node name="Player" parent="." instance=ExtResource("1_kwxv2")]
-position = Vector2(949, 816)
+position = Vector2(683, 909)
 
 [node name="collectablePlaceholder" type="Area2D" parent="."]
 position = Vector2(1456, 671)

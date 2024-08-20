@@ -1,6 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bag6snh8e3qpq"]
+[gd_scene load_steps=6 format=3 uid="uid://bag6snh8e3qpq"]
 
 [ext_resource type="Texture2D" uid="uid://bn6wvwxlalrtp" path="res://Assets/Obstacles/Stone-Ruins/Sprite-0006.png" id="1_e4w08"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_mqge6"]
+[ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="1_vnh4n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
 size = Vector2(41, 10.2)
@@ -11,8 +13,12 @@ size = Vector2(37.6, 24.2)
 [node name="Obstacle_Rocks_1" type="RigidBody2D"]
 collision_layer = 4
 collision_mask = 41
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_mqge6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("1_vnh4n")
 position = Vector2(-8, -80)
 scale = Vector2(5, 5)
 texture = ExtResource("1_e4w08")

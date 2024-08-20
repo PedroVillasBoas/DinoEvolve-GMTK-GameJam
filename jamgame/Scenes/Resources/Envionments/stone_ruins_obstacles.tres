@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=9 format=3 uid="uid://lbb2dtiln03x"]
+
+[ext_resource type="Script" path="res://Scenes/Resources/Envionments/environment_obstacle_data.gd" id="1_1xwv2"]
+[ext_resource type="PackedScene" uid="uid://dcmyj0poa7us5" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_colum_1.tscn" id="1_fsipv"]
+[ext_resource type="PackedScene" uid="uid://d3u1pdgbk2cry" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_colum_2.tscn" id="2_w74qk"]
+[ext_resource type="PackedScene" uid="uid://bsrge4klgthi5" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_colum_3.tscn" id="3_4oi67"]
+[ext_resource type="PackedScene" uid="uid://bag6snh8e3qpq" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_rocks_1.tscn" id="4_08s5y"]
+[ext_resource type="PackedScene" uid="uid://c12jhcst6meye" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_rocks_2.tscn" id="5_kfett"]
+[ext_resource type="PackedScene" uid="uid://cttis3d608mc8" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_rocks_3.tscn" id="6_pek0a"]
+[ext_resource type="PackedScene" uid="uid://smxp0frnmtma" path="res://Scenes/Obstacles/Stone-Ruins/obstacle_rocks_4.tscn" id="7_0xnwf"]
+
+[resource]
+script = ExtResource("1_1xwv2")
+environment_name = "StoneRuins"
+obstacles_array = Array[PackedScene]([ExtResource("1_fsipv"), ExtResource("2_w74qk"), ExtResource("3_4oi67"), ExtResource("4_08s5y"), ExtResource("5_kfett"), ExtResource("6_pek0a"), ExtResource("7_0xnwf")])
+obstacle_type = 2

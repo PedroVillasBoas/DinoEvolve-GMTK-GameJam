@@ -9,6 +9,8 @@ class_name Score_Handler
 var score_amount : int = 0
 var collectables_amount : int = 0
 
+signal score_changed
+
 func _ready() -> void:
 	collectables_rich_text.text = "Artifacts: %s" % collectables_amount
 	score_rich_text.text = "Score: %s" % score_amount
@@ -18,7 +20,7 @@ func _process(delta: float) -> void:
 	update_score()
 
 func _physics_process(delta) -> void:
-	score_amount += 0.5 / delta * 0.05
+	set_score_amount(score_amount + 0.5 / delta * 0.05)
 
 func _on_collectable():
 	collectables_amount += 1
@@ -28,3 +30,9 @@ func _on_collectable():
 
 func update_score() -> void:
 	score_rich_text.text = "Score: %s" % score_amount
+
+func set_score_amount(value: int) -> void:
+	if round(score_amount / 2000) < round(value / 2000):
+		emit_signal("score_changed", value)
+	
+	score_amount = value

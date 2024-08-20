@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Dino Evolve"
+run/main_scene="res://Scenes/UI/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://Assets/UI/BootSplash/splash-screen-pink-gradient.png"
 config/icon="res://icon.svg"
@@ -21,6 +22,7 @@ PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_came
 GuiTransitions="*res://addons/simple-gui-transitions/singleton.gd"
 ProjectUISoundController="*res://addons/maaacks_ui_sound_controller/base/scenes/Autoloads/ProjectUISoundController.tscn"
 ProjectMusicController="*res://addons/maaacks_music_controller/base/scenes/Autoloads/ProjectMusicController.tscn"
+GameManager="*res://Scenes/Handlers/game_manager.tscn"
 
 [display]
 
@@ -37,6 +39,8 @@ enabled=PackedStringArray("res://addons/maaacks_credits_scene/plugin.cfg", "res:
 Player="Player Group"
 Obstacle="Obstacle Group"
 Destroyer="Destroy obstacles"
+Dino=""
+Chicken=""
 
 [gui_transitions]
 
@@ -67,9 +71,15 @@ jump={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":32,"location":0,"echo":false,"script":null)
 ]
 }
-shoot={
+up={
 "deadzone": 0.5,
-"events": []
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":119,"location":0,"echo":false,"script":null)
+]
+}
+down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":115,"location":0,"echo":false,"script":null)
+]
 }
 
 [layer_names]
@@ -81,6 +91,7 @@ shoot={
 2d_physics/layer_5="Props"
 2d_physics/layer_6="Destroyer"
 2d_physics/layer_8="WorldBoundary"
+2d_physics/layer_9="Meteor"
 
 [maaacks_credits_scene]
 

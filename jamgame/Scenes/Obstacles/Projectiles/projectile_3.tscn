@@ -1,0 +1,70 @@
+[gd_scene load_steps=10 format=3 uid="uid://byexit7ag3fi1"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_ejkqd"]
+[ext_resource type="Texture2D" uid="uid://dqxx06guf8ifw" path="res://Assets/Projectiles/Effect and Bullet 16x16/Purple Effect and Bullet 16x16.png" id="2_1oix8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55piq"]
+atlas = ExtResource("2_1oix8")
+region = Rect2(224, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2mg4"]
+atlas = ExtResource("2_1oix8")
+region = Rect2(240, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ors0"]
+atlas = ExtResource("2_1oix8")
+region = Rect2(256, 160, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6o0ux"]
+atlas = ExtResource("2_1oix8")
+region = Rect2(272, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qb46m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55piq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2mg4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ors0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6o0ux")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_snv4s"]
+radius = 6.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l3m0b"]
+radius = 7.0
+
+[node name="Projectile_3" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 41
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_ejkqd")
+move_speed = 700.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -3)
+sprite_frames = SubResource("SpriteFrames_qb46m")
+animation = &"spawn"
+autoplay = "spawn"
+frame_progress = 0.597299
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_snv4s")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_l3m0b")

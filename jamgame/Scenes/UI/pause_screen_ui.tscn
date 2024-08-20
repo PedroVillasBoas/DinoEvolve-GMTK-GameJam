@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmawie713jc8b"]
+
+[ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_l6w4f"]
+[ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="1_mvlui"]
+[ext_resource type="Texture2D" uid="uid://buwdyale86duh" path="res://Assets/UI/Free Paper UI System/Book Desk/1.png" id="3_ovwpj"]
+
+[node name="Pause_Screen_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_l6w4f")
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource("1_mvlui")
+layout = NodePath("..")
+group = NodePath("..")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.47451)
+
+[node name="Background" type="NinePatchRect" parent="ColorRect"]
+custom_minimum_size = Vector2(768, 560)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_ovwpj")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Background"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.716296, 0.716296, 0.716296, 1)
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center][pulse]PAUSED[/pulse][/center]"
+fit_content = true
+
+[node name="Buttons" type="VBoxContainer" parent="ColorRect/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.5
+offset_top = -70.0
+offset_right = 55.5
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="ReturnButton" type="Button" parent="ColorRect/Background/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Resume"
+
+[node name="OptionsButton" type="Button" parent="ColorRect/Background/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="ColorRect/Background/Buttons"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "Quit"

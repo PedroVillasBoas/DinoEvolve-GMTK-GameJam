@@ -3,10 +3,12 @@
 [ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_cn88b"]
 [ext_resource type="Texture2D" uid="uid://b1n2q3jrbf53l" path="res://Assets/Obstacles/Underground-Mines/Sprite-0022.png" id="1_x081a"]
 [ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="2_nbyal"]
-[ext_resource type="PackedScene" uid="uid://cucj16ritdjo6" path="res://Scenes/Obstacles/obstacle_collision.tscn" id="3_25x7x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
 size = Vector2(27, 8.8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c1y5c"]
+size = Vector2(24.8, 18)
 
 [node name="Obstacle_Rock_1" type="RigidBody2D"]
 collision_layer = 4
@@ -26,4 +28,10 @@ position = Vector2(0.5, -22)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_jnu2g")
 
-[node name="Area2D" parent="." instance=ExtResource("3_25x7x")]
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(6, -44)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_c1y5c")

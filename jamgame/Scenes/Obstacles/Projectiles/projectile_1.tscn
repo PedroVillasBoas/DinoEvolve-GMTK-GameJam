@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://cmfrsyi7p2lnk"]
+
+[ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_8wiur"]
+[ext_resource type="Texture2D" uid="uid://biwgawtrynobs" path="res://Assets/Projectiles/Effect and Bullet 16x16/Fire Effect and Bullet 16x16.png" id="2_0vjbd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6kj1"]
+atlas = ExtResource("2_0vjbd")
+region = Rect2(240, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afnnc"]
+atlas = ExtResource("2_0vjbd")
+region = Rect2(256, 176, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi3ml"]
+atlas = ExtResource("2_0vjbd")
+region = Rect2(272, 176, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7n0ay"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6kj1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afnnc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi3ml")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qcm6u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d8fow"]
+size = Vector2(13, 6)
+
+[node name="Projectile_1" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 41
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_8wiur")
+move_speed = 700.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7n0ay")
+animation = &"spawn"
+autoplay = "spawn"
+frame_progress = 0.0396574
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_qcm6u")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_d8fow")

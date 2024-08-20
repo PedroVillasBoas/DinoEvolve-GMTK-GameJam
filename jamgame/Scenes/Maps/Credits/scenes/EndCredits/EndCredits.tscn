@@ -3,14 +3,16 @@
 [ext_resource type="PackedScene" uid="uid://c1g50h2avck3w" path="res://Scenes/Maps/Credits/scenes/Credits/Credits.tscn" id="1_885d8"]
 [ext_resource type="Script" path="res://addons/maaacks_credits_scene/examples/scenes/EndCredits/EndCredits.gd" id="2_6pwj4"]
 [ext_resource type="Script" path="res://addons/maaacks_credits_scene/base/scripts/CaptureFocus.gd" id="3_aoilo"]
-[ext_resource type="PackedScene" uid="uid://bkcsjsk2ciff" path="res://addons/maaacks_music_controller/base/scenes/MusicPlayers/BackgroundMusicPlayer.tscn" id="3_v7acr"]
+[ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="3_fr8pr"]
 
 [node name="EndCredits" instance=ExtResource("1_885d8")]
 script = ExtResource("2_6pwj4")
-main_menu_scene = ""
+main_menu_scene = "res://Scenes/UI/main_menu.tscn"
 
-[node name="BackgroundMusicPlayer" parent="." index="0" instance=ExtResource("3_v7acr")]
-bus = &"Master"
+[node name="GuiTransition" type="Node" parent="." index="0"]
+script = ExtResource("3_fr8pr")
+layout = NodePath("..")
+group = NodePath("..")
 
 [node name="BackgroundColor" type="ColorRect" parent="." index="1"]
 layout_mode = 1
@@ -136,5 +138,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 text = "Menu"
 
+[connection signal="visibility_changed" from="." to="." method="_on_visibility_changed"]
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/ExitButton" to="." method="_on_ExitButton_pressed"]
 [connection signal="pressed" from="CenterContainer/EndMessagePanel/VBoxContainer/CenterContainer/HBoxContainer/MenuButton" to="." method="_on_MenuButton_pressed"]

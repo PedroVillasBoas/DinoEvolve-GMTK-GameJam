@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://bsrge4klgthi5"]
+[gd_scene load_steps=6 format=3 uid="uid://bsrge4klgthi5"]
 
 [ext_resource type="Texture2D" uid="uid://o37nu84lm4jk" path="res://Assets/Obstacles/Stone-Ruins/Sprite-0003.png" id="1_34crq"]
+[ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="1_i8dmx"]
 [ext_resource type="Texture2D" uid="uid://bqdq7uski8o3l" path="res://Assets/Obstacles/Stone-Ruins/Sprite-0007.png" id="2_mjplv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jnu2g"]
@@ -14,11 +15,13 @@ collision_layer = 4
 collision_mask = 41
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("1_i8dmx")
 position = Vector2(0, -115)
 scale = Vector2(5, 5)
 texture = ExtResource("1_34crq")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
+material = ExtResource("1_i8dmx")
 position = Vector2(-97, -113)
 scale = Vector2(5, 5)
 texture = ExtResource("2_mjplv")

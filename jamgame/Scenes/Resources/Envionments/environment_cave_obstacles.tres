@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="ObstacleData" load_steps=8 format=3 uid="uid://bi56ybs2tu21s"]
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=7 format=3 uid="uid://bi56ybs2tu21s"]
 
 [ext_resource type="Script" path="res://Scenes/Resources/Envionments/environment_obstacle_data.gd" id="1_sen1h"]
 [ext_resource type="PackedScene" uid="uid://b8a6o14sjwbme" path="res://Scenes/Obstacles/Underground-Mines/obstacle_rock_1.tscn" id="1_yg8jq"]
@@ -6,10 +6,9 @@
 [ext_resource type="PackedScene" uid="uid://cg6ti10nwnlmk" path="res://Scenes/Obstacles/Underground-Mines/obstacle_rock_3.tscn" id="3_rwu4w"]
 [ext_resource type="PackedScene" uid="uid://dl2ysm2wdg5n8" path="res://Scenes/Obstacles/Underground-Mines/obstacle_rock_4.tscn" id="4_gffxh"]
 [ext_resource type="PackedScene" uid="uid://c0mk45p0j4fdu" path="res://Scenes/Obstacles/Underground-Mines/obstacle_spikes_1.tscn" id="5_kj44a"]
-[ext_resource type="PackedScene" uid="uid://ddrllks45pksr" path="res://Scenes/Obstacles/Underground-Mines/obstacle_top_spikes_1.tscn" id="6_mi87x"]
 
 [resource]
 script = ExtResource("1_sen1h")
 environment_name = "EnvironmentCave"
-obstacles_array = Array[PackedScene]([ExtResource("1_yg8jq"), ExtResource("2_13lij"), ExtResource("3_rwu4w"), ExtResource("4_gffxh"), ExtResource("5_kj44a"), ExtResource("6_mi87x")])
+obstacles_array = Array[PackedScene]([ExtResource("1_yg8jq"), ExtResource("2_13lij"), ExtResource("3_rwu4w"), ExtResource("4_gffxh"), ExtResource("5_kj44a")])
 obstacle_type = 2

@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://bxiqpmbfdsy23"]
+
+[ext_resource type="Material" uid="uid://cavmgg24k5rjv" path="res://Scenes/Resources/Shader/outline_shader.tres" id="1_nn0ee"]
+[ext_resource type="Script" path="res://Scripts/Obstacle/obstacle_movement.gd" id="1_wt5xc"]
+[ext_resource type="Texture2D" uid="uid://cfvh7btfi5hb6" path="res://Assets/Props/Swamp-Game/Stones/4.png" id="2_68nbl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_psce0"]
+size = Vector2(32.5, 17.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kq6j8"]
+size = Vector2(13.8, 10.8625)
+
+[node name="Obstacle_Totem_4" type="RigidBody2D"]
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_wt5xc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = ExtResource("1_nn0ee")
+position = Vector2(0, -30)
+scale = Vector2(2, 2)
+texture = ExtResource("2_68nbl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-7.5, -17.5)
+scale = Vector2(2, 2)
+shape = SubResource("RectangleShape2D_psce0")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-10.5, -27.1563)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_kq6j8")

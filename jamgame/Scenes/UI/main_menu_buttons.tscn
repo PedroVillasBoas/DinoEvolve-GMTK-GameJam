@@ -151,3 +151,9 @@ theme_override_colors/font_focus_color = Color(1, 0.360784, 0.352941, 1)
 theme_override_colors/font_color = Color(1, 0.360784, 0.352941, 1)
 theme_override_font_sizes/font_size = 48
 text = "Itch.io Page"
+
+[connection signal="pressed" from="Background/VBoxContainer/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/SkinsButton" to="." method="_on_skins_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Background/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]

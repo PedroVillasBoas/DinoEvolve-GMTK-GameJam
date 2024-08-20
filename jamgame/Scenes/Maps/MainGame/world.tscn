@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dn6hluvk3ggax"]
+[gd_scene load_steps=29 format=3 uid="uid://dn6hluvk3ggax"]
 
 [ext_resource type="PackedScene" uid="uid://tn0ngf82gdku" path="res://Scenes/Player/player.tscn" id="3_2pfoa"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera_host/phantom_camera_host.gd" id="4_4bamc"]
@@ -10,12 +10,221 @@
 [ext_resource type="PackedScene" uid="uid://drapt8fa0eq2l" path="res://Scenes/Handlers/world_boundary.tscn" id="7_ucdcu"]
 [ext_resource type="PackedScene" uid="uid://c5fqn7mxyb2fq" path="res://Scenes/Handlers/score_handler.tscn" id="8_006y1"]
 [ext_resource type="PackedScene" uid="uid://1254y8fb5ybk" path="res://Scenes/Handlers/spawn_handler.tscn" id="9_0g4ce"]
+[ext_resource type="PackedScene" uid="uid://l1ybk450qvt2" path="res://Scenes/UI/in_game_ui_handler.tscn" id="10_v7buq"]
+[ext_resource type="Script" path="res://Scripts/Props/meteor.gd" id="11_j5jrq"]
+[ext_resource type="Texture2D" uid="uid://bvrssvqh2jsar" path="res://Assets/Props/Asteroids/PNGs/Asteroid 01 - Explode.png" id="12_hvmcx"]
+[ext_resource type="Texture2D" uid="uid://bprb7rt5n2bcp" path="res://Assets/Props/Asteroids/PNGs/Asteroid 01 - Base.png" id="13_r4ab6"]
+[ext_resource type="PackedScene" uid="uid://cxha6maqwekse" path="res://Scenes/VFX/explosion.tscn" id="14_d610e"]
 
 [sub_resource type="Resource" id="Resource_itjnl"]
 script = ExtResource("6_trwrg")
 duration = 1.0
 transition = 0
 ease = 2
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01up3"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_apws1"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(96, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42dnn"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(192, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qx7p4"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(288, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fivca"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(384, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nj8b1"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(480, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbsb2"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(576, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ue7r2"]
+atlas = ExtResource("12_hvmcx")
+region = Rect2(672, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h4axg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01up3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_apws1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42dnn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qx7p4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fivca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nj8b1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbsb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ue7r2")
+}],
+"loop": false,
+"name": &"explode",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_r4ab6")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 1.0
+}]
+
+[sub_resource type="Animation" id="Animation_c0u3l"]
+resource_name = "meteor"
+length = 8.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(15, 15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.91986]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-234, 675)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Explosion:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-234, 675)]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(4.93333, 5, 5.0001, 8),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [],
+"method": &"explode"
+}, {
+"args": [],
+"method": &"hide_meteor"
+}, {
+"args": [],
+"method": &"activate_vfx"
+}, {
+"args": [],
+"method": &"despawn"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_e5u46"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AnimatedSprite2D:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AnimatedSprite2D:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("AnimatedSprite2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Explosion:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nvy7i"]
+_data = {
+"RESET": SubResource("Animation_e5u46"),
+"meteor": SubResource("Animation_c0u3l")
+}
 
 [node name="World" type="Node2D"]
 
@@ -70,12 +279,19 @@ position = Vector2(3678, 921)
 position = Vector2(3678, 169)
 
 [node name="ProjectileSpawn2" type="Node2D" parent="Spawns"]
-position = Vector2(3678, 464)
+position = Vector2(3678, 320)
 
 [node name="ProjectileSpawn3" type="Node2D" parent="Spawns"]
+position = Vector2(3678, 471)
+
+[node name="ProjectileSpawn4" type="Node2D" parent="Spawns"]
+position = Vector2(3678, 627)
+
+[node name="ProjectileSpawn5" type="Node2D" parent="Spawns"]
 position = Vector2(3678, 771)
 
 [node name="Envionment_Stone_Ruins" parent="." instance=ExtResource("7_h8yey")]
+visible = false
 
 [node name="Envionment_Envionment_Cave" parent="." instance=ExtResource("6_biyr1")]
 visible = false
@@ -88,9 +304,35 @@ position = Vector2(793, 802)
 [node name="Score_Handler" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("8_006y1")]
 player = NodePath("../../Player")
 
+[node name="InGame_UI_Handler" parent="CanvasLayer" instance=ExtResource("10_v7buq")]
+
 [node name="Handlers" type="Node" parent="."]
 
 [node name="Spawn_Handler" parent="Handlers" node_paths=PackedStringArray("top_obstacle_spawn_pos", "projectile_spawns_pos", "ground_obstacle_spawn_pos") instance=ExtResource("9_0g4ce")]
 top_obstacle_spawn_pos = NodePath("../../Spawns/TopSpawn")
-projectile_spawns_pos = [NodePath("../../Spawns/ProjectileSpawn"), NodePath("../../Spawns/ProjectileSpawn2"), NodePath("../../Spawns/ProjectileSpawn3")]
+projectile_spawns_pos = [NodePath("../../Spawns/ProjectileSpawn"), NodePath("../../Spawns/ProjectileSpawn2"), NodePath("../../Spawns/ProjectileSpawn3"), NodePath("../../Spawns/ProjectileSpawn4"), NodePath("../../Spawns/ProjectileSpawn5")]
 ground_obstacle_spawn_pos = NodePath("../../Spawns/GroundSpawn")
+
+[node name="Meteor" type="Node" parent="."]
+
+[node name="Meteor" type="Node2D" parent="Meteor" node_paths=PackedStringArray("animated_sprite", "vfx", "animation_player")]
+process_mode = 3
+visible = false
+position = Vector2(1837, 0)
+script = ExtResource("11_j5jrq")
+animated_sprite = NodePath("AnimatedSprite2D")
+vfx = NodePath("Explosion")
+animation_player = NodePath("AnimationPlayer")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Meteor/Meteor"]
+sprite_frames = SubResource("SpriteFrames_h4axg")
+animation = &"spawn"
+autoplay = "spawn"
+
+[node name="Explosion" parent="Meteor/Meteor" instance=ExtResource("14_d610e")]
+z_index = 10
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Meteor/Meteor"]
+libraries = {
+"": SubResource("AnimationLibrary_nvy7i")
+}

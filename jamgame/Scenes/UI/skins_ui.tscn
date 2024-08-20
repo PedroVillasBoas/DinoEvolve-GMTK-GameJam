@@ -1,7 +1,8 @@
-[gd_scene load_steps=19 format=3 uid="uid://rrt8inlu3y7h"]
+[gd_scene load_steps=20 format=3 uid="uid://rrt8inlu3y7h"]
 
 [ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_0404s"]
 [ext_resource type="Texture2D" uid="uid://cwc33feun3qc5" path="res://Assets/Background/Mondstadt/windrise-background-4k.png" id="1_ly5p4"]
+[ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_spy0k"]
 [ext_resource type="Texture2D" uid="uid://dkwaoqa72a2uo" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/10 Calander/1.png" id="2_tsitb"]
 [ext_resource type="Texture2D" uid="uid://rlufu6j3s7iw" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/2.png" id="3_lrgnp"]
 [ext_resource type="Texture2D" uid="uid://5ueyvwbx0rqq" path="res://Assets/UI/Free Paper UI System/Content/5 Holders/3.png" id="4_i6va1"]
@@ -28,6 +29,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_0404s")
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource("2_spy0k")
+animation_enter = 5
+animation_leave = 5
+layout = NodePath("..")
+group = NodePath("../Background/BlurBackground/ButtonsBackground")
 
 [node name="Background" type="NinePatchRect" parent="."]
 layout_mode = 0

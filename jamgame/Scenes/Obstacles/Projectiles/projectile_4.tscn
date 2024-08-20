@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://0ermhfyoyl8f"]
+
+[ext_resource type="Texture2D" uid="uid://ccgcc5drdymlu" path="res://Assets/Projectiles/Effect and Bullet 16x16/Water Effect and Bullet 16x16.png" id="1_85a38"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x7x8h"]
+atlas = ExtResource("1_85a38")
+region = Rect2(160, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_igbue"]
+atlas = ExtResource("1_85a38")
+region = Rect2(176, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dias0"]
+atlas = ExtResource("1_85a38")
+region = Rect2(192, 112, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_20mit"]
+atlas = ExtResource("1_85a38")
+region = Rect2(160, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_72mg8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x7x8h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_igbue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dias0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_20mit")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_gd76c"]
+radius = 4.12311
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_niibg"]
+radius = 6.08276
+
+[node name="Projectile_4" type="RigidBody2D"]
+collision_layer = 4
+collision_mask = 41
+gravity_scale = 0.0
+lock_rotation = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_72mg8")
+animation = &"spawn"
+autoplay = "spawn"
+frame_progress = 0.970159
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_gd76c")
+
+[node name="Area2D" type="Area2D" parent="." groups=["Obstacle"]]
+collision_layer = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_niibg")

@@ -8,12 +8,10 @@ func _end_reached():
 	super._end_reached()
 
 func _on_MenuButton_pressed():
-	get_tree().change_scene_to_file(main_menu_scene)
-	# If Maaack's Scene Loader is installed, use this instead:
-	# SceneLoader.load_scene(main_menu_scene)
+	GuiTransitions.go_to("MainMenuButtons")
 
 func _on_ExitButton_pressed():
-	get_tree().quit()
+	GuiTransitions.go_to("MainMenuButtons")
 
 func _ready():
 	if main_menu_scene.is_empty():
@@ -27,4 +25,10 @@ func _unhandled_input(event):
 		if not %EndMessagePanel.visible:
 			_end_reached()
 		else:
-			get_tree().quit()
+			GuiTransitions.go_to("MainMenuButtons")
+
+func _on_visibility_changed() -> void:
+	if self.is_visible_in_tree():
+		reset()
+	else:
+		%EndMessagePanel.hide()

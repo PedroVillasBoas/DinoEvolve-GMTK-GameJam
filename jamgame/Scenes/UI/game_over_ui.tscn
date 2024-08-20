@@ -1,0 +1,130 @@
+[gd_scene load_steps=4 format=3 uid="uid://crmvkpm36o3ot"]
+
+[ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_47baw"]
+[ext_resource type="Texture2D" uid="uid://fueonfsveby1" path="res://Assets/UI/Free Paper UI System/Book Desk/2.png" id="2_0wdsn"]
+[ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_qrutq"]
+
+[node name="Game_Over_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_47baw")
+
+[node name="GuiTransition" type="Node" parent="."]
+script = ExtResource("2_qrutq")
+layout = NodePath("..")
+group = NodePath("..")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.533333, 0.537255, 0.298039)
+
+[node name="Background" type="NinePatchRect" parent="ColorRect"]
+custom_minimum_size = Vector2(768, 560)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_0wdsn")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect/Background"]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 100.0
+offset_right = 250.0
+offset_bottom = 174.0
+grow_horizontal = 2
+theme_override_colors/default_color = Color(0.414983, 0.225738, 0.180051, 1)
+theme_override_font_sizes/normal_font_size = 80
+bbcode_enabled = true
+text = "[center][shake]GAME OVER[/shake][/center]"
+fit_content = true
+
+[node name="Texts" type="VBoxContainer" parent="ColorRect/Background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Score" type="HBoxContainer" parent="ColorRect/Background/Texts"]
+layout_mode = 2
+alignment = 1
+
+[node name="ScoreLabel" type="Label" parent="ColorRect/Background/Texts/Score"]
+layout_mode = 2
+text = "SCORE:"
+
+[node name="ActualScoreLabel" type="Label" parent="ColorRect/Background/Texts/Score"]
+layout_mode = 2
+text = "00000000000"
+
+[node name="Artifacts" type="HBoxContainer" parent="ColorRect/Background/Texts"]
+layout_mode = 2
+alignment = 1
+
+[node name="ArtifactsLabel" type="Label" parent="ColorRect/Background/Texts/Artifacts"]
+layout_mode = 2
+text = "Artifacts:"
+
+[node name="ActualScoreLabel" type="Label" parent="ColorRect/Background/Texts/Artifacts"]
+layout_mode = 2
+text = "0000"
+
+[node name="Buttons" type="VBoxContainer" parent="ColorRect/Background"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -126.5
+offset_top = -189.0
+offset_right = 126.5
+offset_bottom = -97.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="PlayAgainButton" type="Button" parent="ColorRect/Background/Buttons"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(2.96004e-06, 0.701049, 0, 1)
+theme_override_colors/font_pressed_color = Color(1.75677e-06, 0.458364, 9.62615e-08, 1)
+theme_override_colors/font_color = Color(0, 0.905882, 0, 1)
+text = "Play Again?"
+
+[node name="MainMenuButton" type="Button" parent="ColorRect/Background/Buttons"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.267581, 0.242769, 0.232134, 1)
+theme_override_colors/font_pressed_color = Color(0.214128, 0.19318, 0.1842, 1)
+theme_override_colors/font_focus_color = Color(0.305882, 0.278431, 0.266667, 1)
+theme_override_colors/font_color = Color(0.305882, 0.278431, 0.266667, 1)
+text = "Back to Main Menu"

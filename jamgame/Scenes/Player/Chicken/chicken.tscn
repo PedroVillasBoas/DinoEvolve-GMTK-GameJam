@@ -77,7 +77,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epytx"]
 size = Vector2(20, 12)
 
-[node name="Chicken" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "chicken_collision_handler")]
+[node name="Chicken" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "chicken_collision_handler") groups=["Chicken"]]
 shape = SubResource("RectangleShape2D_b5co7")
 script = ExtResource("1_cm7nn")
 animated_sprite = NodePath("AnimatedSprite2D")

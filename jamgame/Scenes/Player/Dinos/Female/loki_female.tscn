@@ -146,7 +146,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="LokiFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite")]
+[node name="LokiFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite") groups=["Dino"]]
 shape = SubResource("CapsuleShape2D_k1uef")
 script = ExtResource("1_i5r75")
 animated_sprite = NodePath("AnimatedSprite2D")

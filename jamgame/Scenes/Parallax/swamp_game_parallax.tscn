@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=3 uid="uid://dlsmfbp4kwq31"]
+
+[ext_resource type="Texture2D" uid="uid://fomkikibugv2" path="res://Assets/Background/Swamp-Game/1.png" id="1_pt4cg"]
+[ext_resource type="Texture2D" uid="uid://blj7r6oddp4q0" path="res://Assets/Background/Swamp-Game/2.png" id="2_lej55"]
+[ext_resource type="Texture2D" uid="uid://crhehcvepj8bb" path="res://Assets/Background/Swamp-Game/3.png" id="3_bgfc5"]
+[ext_resource type="Texture2D" uid="uid://dxqwadwuetmtj" path="res://Assets/Background/Swamp-Game/4.png" id="4_ywhds"]
+[ext_resource type="Texture2D" uid="uid://ww8qkcerp7j0" path="res://Assets/Background/Swamp-Game/5.png" id="5_kofc2"]
+
+[node name="SwampGameParallax" type="Node2D"]
+
+[node name="Sky" type="Parallax2D" parent="."]
+scroll_scale = Vector2(0, 1)
+repeat_size = Vector2(2304, 1296)
+
+[node name="Sky" type="Sprite2D" parent="Sky"]
+z_index = -4
+scale = Vector2(4, 4)
+texture = ExtResource("1_pt4cg")
+centered = false
+
+[node name="BackTrees" type="Parallax2D" parent="."]
+scroll_scale = Vector2(-0.3, 1)
+repeat_size = Vector2(2304, 1296)
+
+[node name="BackTrees" type="Sprite2D" parent="BackTrees"]
+z_index = -3
+scale = Vector2(4, 4)
+texture = ExtResource("2_lej55")
+centered = false
+
+[node name="FrontTrees" type="Parallax2D" parent="."]
+scroll_scale = Vector2(-0.5, 1)
+repeat_size = Vector2(2304, 1296)
+
+[node name="FrontTrees" type="Sprite2D" parent="FrontTrees"]
+z_index = -2
+scale = Vector2(4, 4)
+texture = ExtResource("3_bgfc5")
+centered = false
+
+[node name="Water" type="Parallax2D" parent="."]
+scroll_scale = Vector2(-0.6, 1)
+repeat_size = Vector2(2304, 1296)
+
+[node name="Water" type="Sprite2D" parent="Water"]
+z_index = -1
+scale = Vector2(4, 4)
+texture = ExtResource("4_ywhds")
+centered = false
+
+[node name="Foreground" type="Parallax2D" parent="."]
+scroll_scale = Vector2(-0.8, 1)
+repeat_size = Vector2(2304, 1296)
+
+[node name="Foreground" type="Sprite2D" parent="Foreground"]
+z_index = 1
+scale = Vector2(4, 4)
+texture = ExtResource("5_kofc2")
+centered = false

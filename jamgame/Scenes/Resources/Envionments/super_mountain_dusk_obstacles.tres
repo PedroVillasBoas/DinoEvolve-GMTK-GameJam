@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=7 format=3 uid="uid://csqwy4sv4i2go"]
+
+[ext_resource type="PackedScene" uid="uid://cvm1lfnq6fvjf" path="res://Scenes/Obstacles/Swamp-Game/obstacle_totem_1.tscn" id="1_vsfhx"]
+[ext_resource type="PackedScene" uid="uid://c13hwovj4krrm" path="res://Scenes/Obstacles/Swamp-Game/obstacle_totem_2.tscn" id="2_e07di"]
+[ext_resource type="PackedScene" uid="uid://dffdckqqvmm4d" path="res://Scenes/Obstacles/Swamp-Game/obstacle_totem_3.tscn" id="3_eqq4m"]
+[ext_resource type="PackedScene" uid="uid://bxiqpmbfdsy23" path="res://Scenes/Obstacles/Swamp-Game/obstacle_totem_4.tscn" id="4_rs0wi"]
+[ext_resource type="PackedScene" uid="uid://c8ttjwcsc7ce1" path="res://Scenes/Obstacles/Swamp-Game/obstacle_totem_5.tscn" id="5_46ebo"]
+[ext_resource type="Script" path="res://Scenes/Resources/Envionments/environment_obstacle_data.gd" id="6_glejk"]
+
+[resource]
+script = ExtResource("6_glejk")
+environment_name = "SuperMountainDusk"
+obstacles_array = Array[PackedScene]([ExtResource("1_vsfhx"), ExtResource("2_e07di"), ExtResource("3_eqq4m"), ExtResource("4_rs0wi"), ExtResource("5_46ebo")])
+obstacle_type = 2

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ObstacleData" load_steps=6 format=3 uid="uid://rs4gmngkxhyo"]
+
+[ext_resource type="Script" path="res://Scenes/Resources/Envionments/environment_obstacle_data.gd" id="1_2cjr3"]
+[ext_resource type="PackedScene" uid="uid://cmfrsyi7p2lnk" path="res://Scenes/Obstacles/Projectiles/projectile_1.tscn" id="1_mke4q"]
+[ext_resource type="PackedScene" uid="uid://d06483fw3d2il" path="res://Scenes/Obstacles/Projectiles/projectile_2.tscn" id="2_4thdl"]
+[ext_resource type="PackedScene" uid="uid://byexit7ag3fi1" path="res://Scenes/Obstacles/Projectiles/projectile_3.tscn" id="3_w787o"]
+[ext_resource type="PackedScene" uid="uid://0ermhfyoyl8f" path="res://Scenes/Obstacles/Projectiles/projectile_4.tscn" id="4_e4ep6"]
+
+[resource]
+script = ExtResource("1_2cjr3")
+environment_name = "SwampGame"
+obstacles_array = Array[PackedScene]([ExtResource("1_mke4q"), ExtResource("2_4thdl"), ExtResource("3_w787o"), ExtResource("4_e4ep6")])
+obstacle_type = 3
