@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="Dino Evolve"
-run/main_scene="res://Scenes/Player/player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 boot_splash/image="res://Assets/UI/BootSplash/splash-screen-pink-gradient.png"
 config/icon="res://icon.svg"

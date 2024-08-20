@@ -1,0 +1,531 @@
+[gd_scene load_steps=19 format=3 uid="uid://rrt8inlu3y7h"]
+
+[ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_0404s"]
+[ext_resource type="Texture2D" uid="uid://cwc33feun3qc5" path="res://Assets/Background/Mondstadt/windrise-background-4k.png" id="1_ly5p4"]
+[ext_resource type="Texture2D" uid="uid://dkwaoqa72a2uo" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/10 Calander/1.png" id="2_tsitb"]
+[ext_resource type="Texture2D" uid="uid://rlufu6j3s7iw" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/2.png" id="3_lrgnp"]
+[ext_resource type="Texture2D" uid="uid://5ueyvwbx0rqq" path="res://Assets/UI/Free Paper UI System/Content/5 Holders/3.png" id="4_i6va1"]
+[ext_resource type="Texture2D" uid="uid://t3helr5li4jc" path="res://Assets/Characters/Player/skins-placeholders/lokifemale.png" id="5_457tl"]
+[ext_resource type="Texture2D" uid="uid://dldmpgvxym0gg" path="res://Assets/Characters/Player/skins-placeholders/senafemale.png" id="5_k7ts4"]
+[ext_resource type="Texture2D" uid="uid://b8sk8b2of58ao" path="res://Assets/Characters/Player/skins-placeholders/kiramale.png" id="7_pn11f"]
+[ext_resource type="Texture2D" uid="uid://b65lhwb577t57" path="res://Assets/Characters/Player/skins-placeholders/kurofemale.png" id="8_u33dw"]
+[ext_resource type="Texture2D" uid="uid://c3ksaxbuunb2w" path="res://Assets/Characters/Player/skins-placeholders/monomale.png" id="9_a3tbt"]
+[ext_resource type="Texture2D" uid="uid://d15luomppsrc5" path="res://Assets/Characters/Player/skins-placeholders/mortfemale.png" id="10_2lac3"]
+[ext_resource type="Texture2D" uid="uid://qfof8koglr7j" path="res://Assets/Characters/Player/skins-placeholders/chicken-default.png" id="11_jb0d1"]
+[ext_resource type="Texture2D" uid="uid://dhmb7jcmc440l" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/4 Notification/2.png" id="11_kxv25"]
+[ext_resource type="Texture2D" uid="uid://xa86bwusq8my" path="res://Assets/Characters/Player/skins-placeholders/Blucken.png" id="12_5je0h"]
+[ext_resource type="Texture2D" uid="uid://totm2cdupm0e" path="res://Assets/Characters/Player/skins-placeholders/Golden-Chicken.png" id="13_6ycy0"]
+[ext_resource type="Texture2D" uid="uid://cdv52run52vh4" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/8 Shop/1.png" id="15_kmgrr"]
+[ext_resource type="Texture2D" uid="uid://jbjis34gr3kp" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/2 Headers/4.png" id="16_8m01w"]
+[ext_resource type="Texture2D" uid="uid://dryyl0g3inluy" path="res://Assets/UI/Free Paper UI System/Paper UI Pack/Paper UI/Folding & Cutout/7 Dialogue Box/1.png" id="17_1fsfh"]
+
+[node name="Skins_UI" type="Control"]
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0404s")
+
+[node name="Background" type="NinePatchRect" parent="."]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ly5p4")
+
+[node name="BlurBackground" type="ColorRect" parent="Background"]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.00784314, 0.184314, 0.203922, 0.709804)
+
+[node name="ButtonsBackground" type="NinePatchRect" parent="Background/BlurBackground"]
+custom_minimum_size = Vector2(1312, 1088)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -656.0
+offset_top = -544.0
+offset_right = 656.0
+offset_bottom = 544.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tsitb")
+
+[node name="DinosSkinsGridContainer" type="GridContainer" parent="Background/BlurBackground/ButtonsBackground"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -20.0
+offset_right = 340.0
+offset_bottom = 20.0
+grow_vertical = 2
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Loki" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="LokiButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Loki"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_457tl")
+icon_alignment = 1
+
+[node name="Sena" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="SenaButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Sena"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("5_k7ts4")
+icon_alignment = 1
+
+[node name="Kira" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="KiraButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Kira"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("7_pn11f")
+icon_alignment = 1
+
+[node name="Kuro" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="KuroButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Kuro"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("8_u33dw")
+icon_alignment = 1
+
+[node name="Mono" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="MonoButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Mono"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("9_a3tbt")
+icon_alignment = 1
+
+[node name="Mort" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="MortButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/DinosSkinsGridContainer/Mort"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("10_2lac3")
+icon_alignment = 1
+
+[node name="ChickensSkinsGridContainer" type="GridContainer" parent="Background/BlurBackground/ButtonsBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -356.0
+offset_top = -303.5
+offset_right = -16.0
+offset_bottom = -118.5
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/h_separation = 50
+theme_override_constants/v_separation = 25
+columns = 3
+
+[node name="Default" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="DefaultButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer/Default"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("11_jb0d1")
+icon_alignment = 1
+
+[node name="Blucken" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="BluckenButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer/Blucken"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("12_5je0h")
+icon_alignment = 1
+
+[node name="Golden" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+texture = ExtResource("4_i6va1")
+
+[node name="GoldenButton" type="Button" parent="Background/BlurBackground/ButtonsBackground/ChickensSkinsGridContainer/Golden"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -13.5
+offset_top = -17.0
+offset_right = 13.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+icon = ExtResource("13_6ycy0")
+icon_alignment = 1
+
+[node name="DinoTitleBackground" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground"]
+custom_minimum_size = Vector2(336, 96)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = -223.0
+offset_right = 636.0
+offset_bottom = -127.0
+grow_vertical = 2
+texture = ExtResource("11_kxv25")
+
+[node name="Label" type="Label" parent="Background/BlurBackground/ButtonsBackground/DinoTitleBackground"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -52.5
+offset_top = -13.0
+offset_right = 52.5
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0509804, 0.564706, 0.407843, 1)
+theme_override_font_sizes/font_size = 48
+text = "Dinos"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ChickensTitleBackground" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground"]
+custom_minimum_size = Vector2(336, 96)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 300.0
+offset_top = 106.0
+offset_right = 636.0
+offset_bottom = 202.0
+grow_vertical = 2
+texture = ExtResource("11_kxv25")
+
+[node name="Label" type="Label" parent="Background/BlurBackground/ButtonsBackground/ChickensTitleBackground"]
+z_index = 3
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -88.5
+offset_top = -13.0
+offset_right = 88.5
+offset_bottom = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0509804, 0.564706, 0.407843, 1)
+theme_override_font_sizes/font_size = 48
+text = "Chickens"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PreviewBackground" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground"]
+custom_minimum_size = Vector2(582.4, 627.2)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -664.0
+offset_top = -268.0
+offset_right = -81.6
+offset_bottom = 359.2
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("15_kmgrr")
+
+[node name="PreviewTitleBackground" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -149.333
+offset_top = 75.0
+offset_right = 149.333
+offset_bottom = 187.0
+grow_horizontal = 2
+texture = ExtResource("16_8m01w")
+
+[node name="Label" type="Label" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground/PreviewTitleBackground"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.5
+offset_top = -26.0
+offset_right = 76.5
+offset_bottom = 18.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.0509804, 0.564706, 0.407843, 1)
+theme_override_font_sizes/font_size = 48
+text = "PREVIEW"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground"]
+custom_minimum_size = Vector2(380, 280)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 40.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground/Control/Control"]
+scale = Vector2(10, 10)
+animation = &"idle"
+autoplay = "idle"
+
+[node name="TextBackground" type="NinePatchRect" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -256.923
+offset_top = -224.0
+offset_right = 256.923
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("17_1fsfh")
+
+[node name="Label" type="Label" parent="Background/BlurBackground/ButtonsBackground/PreviewBackground/TextBackground"]
+custom_minimum_size = Vector2(420, 80)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -15.0
+offset_right = 20.0
+offset_bottom = 15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.807843, 0.72549, 0.564706, 1)
+theme_override_font_sizes/font_size = 32
+text = "Unlocked with: 
+10.000 Meters
+10 Colectables"
+
+[node name="ConfirmButton" type="Button" parent="Background/BlurBackground/ButtonsBackground"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -277.0
+offset_top = -169.0
+offset_right = -164.0
+offset_bottom = -125.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_disabled_color = Color(0.643248, 0, 0.251328, 1)
+theme_override_colors/font_hover_color = Color(0.0431855, 0.509343, 0.366605, 1)
+theme_override_colors/font_pressed_color = Color(0.0722991, 0.773341, 0.56279, 1)
+theme_override_colors/font_focus_color = Color(0.0352107, 0.456097, 0.326905, 1)
+theme_override_colors/font_color = Color(0.0509804, 0.564706, 0.407843, 1)
+disabled = true
+text = "Confirm"
+
+[node name="ReturnButton" type="Button" parent="Background/BlurBackground/ButtonsBackground"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 164.0
+offset_top = -169.0
+offset_right = 269.0
+offset_bottom = -125.0
+grow_vertical = 0
+theme_override_colors/font_hover_color = Color(0.540388, 0.490218, 0.416591, 1)
+theme_override_colors/font_pressed_color = Color(0.733929, 0.684551, 0.612447, 1)
+theme_override_colors/font_color = Color(0.705882, 0.654902, 0.580392, 1)
+text = "Return"
+
+[node name="TitleBackground" type="NinePatchRect" parent="Background/BlurBackground"]
+custom_minimum_size = Vector2(448, 224)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -224.0
+offset_top = 99.0
+offset_right = 224.0
+offset_bottom = 323.0
+grow_horizontal = 2
+texture = ExtResource("3_lrgnp")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Background/BlurBackground/TitleBackground"]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -0.5
+offset_right = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.807843, 0.72549, 0.564706, 1)
+theme_override_font_sizes/normal_font_size = 72
+bbcode_enabled = true
+text = "[center][outline_size=5][outline_color=#0d9068][pulse]Skins[/pulse][/outline_color][/outline_size][/center]"
+fit_content = true
