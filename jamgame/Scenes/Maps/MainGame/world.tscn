@@ -302,6 +302,7 @@ position = Vector2(793, 225)
 changer_handler = NodePath("../Handlers/Changer_Handler")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+process_mode = 3
 
 [node name="Score_Handler" parent="CanvasLayer" node_paths=PackedStringArray("player") instance=ExtResource("8_006y1")]
 player = NodePath("../../Player")

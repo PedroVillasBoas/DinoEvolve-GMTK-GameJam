@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://crmvkpm36o3ot"]
+[gd_scene load_steps=5 format=3 uid="uid://crmvkpm36o3ot"]
 
 [ext_resource type="Theme" uid="uid://chlnkbertyww3" path="res://Assets/UI/ornate-theme-4.1/4.1/ornate-theme.tres" id="1_47baw"]
 [ext_resource type="Texture2D" uid="uid://fueonfsveby1" path="res://Assets/UI/Free Paper UI System/Book Desk/2.png" id="2_0wdsn"]
+[ext_resource type="Script" path="res://Scripts/GameUi/game_over_ui.gd" id="2_5htd7"]
 [ext_resource type="Script" path="res://addons/simple-gui-transitions/transition.gd" id="2_qrutq"]
 
 [node name="Game_Over_UI" type="Control"]
@@ -13,6 +14,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("1_47baw")
+script = ExtResource("2_5htd7")
 
 [node name="GuiTransition" type="Node" parent="."]
 script = ExtResource("2_qrutq")
@@ -129,3 +131,6 @@ theme_override_colors/font_pressed_color = Color(0.214128, 0.19318, 0.1842, 1)
 theme_override_colors/font_focus_color = Color(0.305882, 0.278431, 0.266667, 1)
 theme_override_colors/font_color = Color(0.305882, 0.278431, 0.266667, 1)
 text = "Back to Main Menu"
+
+[connection signal="pressed" from="ColorRect/Background/Buttons/PlayAgainButton" to="." method="_on_play_again_button_pressed"]
+[connection signal="pressed" from="ColorRect/Background/Buttons/MainMenuButton" to="." method="_on_main_menu_button_pressed"]

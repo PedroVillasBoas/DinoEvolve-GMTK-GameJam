@@ -10,6 +10,7 @@ var is_chicken : bool = false
 var is_dead : bool = false
 
 @export var changer_handler : Changer_Handler
+@export var camera : PhantomCamera2D
 
 var dino_skin
 var chicken_skin
@@ -66,12 +67,14 @@ func _on_chicken_time() -> void:
 	dino_skin.hide()
 	chicken_skin.show()
 	is_chicken = true
+	camera.zoom = Vector2(5,5)
 
 func _on_dino_time() -> void:
 	set_motion_mode(MOTION_MODE_GROUNDED)
 	dino_skin.show()
 	chicken_skin.hide()
 	is_chicken = false
+	camera.zoom = Vector2(1,1)
 
 func get_skins():
 	for child in get_children():
