@@ -1,0 +1,180 @@
+[gd_scene load_steps=28 format=3 uid="uid://chb54yama1lck"]
+
+[ext_resource type="Script" path="res://Scripts/Handlers/animation_handler.gd" id="1_0bd6v"]
+[ext_resource type="Texture2D" uid="uid://b7v7t6drt2k8w" path="res://Assets/Characters/Player/Dino-Family/female/mort/base/dead.png" id="2_erwj5"]
+[ext_resource type="Texture2D" uid="uid://ca8mfbium7hm4" path="res://Assets/Characters/Player/Dino-Family/female/mort/base/jump.png" id="3_pcl4y"]
+[ext_resource type="Texture2D" uid="uid://cjbi1wdrvb3jj" path="res://Assets/Characters/Player/Dino-Family/female/mort/base/move.png" id="4_vm8b7"]
+[ext_resource type="Texture2D" uid="uid://c0ih6om0ekps0" path="res://Assets/Characters/Player/Dino-Family/female/mort/egg/hatch.png" id="5_axecu"]
+[ext_resource type="PackedScene" uid="uid://4jistgv25la3" path="res://Scenes/Handlers/dino_collision_handler.tscn" id="6_6048p"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fv4c6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cl6pu"]
+atlas = ExtResource("2_erwj5")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22yjb"]
+atlas = ExtResource("2_erwj5")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n0g40"]
+atlas = ExtResource("2_erwj5")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcm3l"]
+atlas = ExtResource("2_erwj5")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vw6fh"]
+atlas = ExtResource("2_erwj5")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fm88s"]
+atlas = ExtResource("3_pcl4y")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c23tp"]
+atlas = ExtResource("3_pcl4y")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6oyt"]
+atlas = ExtResource("3_pcl4y")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kiob"]
+atlas = ExtResource("3_pcl4y")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qmh2b"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ocy6"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bauuc"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nnmpe"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1ywr"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3y6n"]
+atlas = ExtResource("4_vm8b7")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utyms"]
+atlas = ExtResource("5_axecu")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_avloa"]
+atlas = ExtResource("5_axecu")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0p2sa"]
+atlas = ExtResource("5_axecu")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hh7i"]
+atlas = ExtResource("5_axecu")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3ugae"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cl6pu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22yjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n0g40")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcm3l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vw6fh")
+}],
+"loop": true,
+"name": &"dead",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fm88s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c23tp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6oyt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kiob")
+}],
+"loop": true,
+"name": &"jump",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qmh2b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ocy6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bauuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nnmpe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1ywr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3y6n")
+}],
+"loop": true,
+"name": &"movement",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utyms")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_avloa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0p2sa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hh7i")
+}],
+"loop": true,
+"name": &"spawn",
+"speed": 5.0
+}]
+
+[node name="MortFemale" type="CollisionShape2D" node_paths=PackedStringArray("animated_sprite", "dino_collision_handler")]
+shape = SubResource("CapsuleShape2D_fv4c6")
+script = ExtResource("1_0bd6v")
+animated_sprite = NodePath("AnimatedSprite2D")
+dino_collision_handler = NodePath("Dino_Collision_Handler")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(10, 10)
+sprite_frames = SubResource("SpriteFrames_3ugae")
+animation = &"spawn"
+autoplay = "movement"
+
+[node name="Dino_Collision_Handler" parent="." instance=ExtResource("6_6048p")]

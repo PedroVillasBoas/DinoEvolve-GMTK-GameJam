@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://hd44vcmha6ua"]
+
+[node name="CornCollectable" type="Node2D"]
