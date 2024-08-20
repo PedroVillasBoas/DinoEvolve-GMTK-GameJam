@@ -2,6 +2,13 @@ extends Node
 
 class_name Spawn_Handler
 
+# Preloading the Resources we created
+@onready var environment_cave_data = preload("res://Scenes/Resources/Envionments/environment_cave_obstacles.tres")
+@onready var stone_ruins_data = preload("res://Scenes/Resources/Envionments/stone_ruins_obstacles.tres")
+@onready var super_mountain_dusk_data = preload("res://Scenes/Resources/Envionments/super_mountain_dusk_obstacles.tres")
+@onready var swamp_game_data = preload("res://Scenes/Resources/Envionments/projectiles_obstacles.tres")
+
+
 # Spawns
 @export_category("Spawns")
 @export var top_obstacle_spawn_pos : Node2D
@@ -40,12 +47,6 @@ func _ready() -> void:
 
 # Add the Biomes Data to the Dictionary
 func load_biomes_data() -> void:
-	# Preloading the Resources we created
-	var environment_cave_data = preload("res://Scenes/Resources/Envionments/environment_cave_obstacles.tres")
-	var stone_ruins_data = preload("res://Scenes/Resources/Envionments/stone_ruins_obstacles.tres")
-	var super_mountain_dusk_data = preload("res://Scenes/Resources/Envionments/super_mountain_dusk_obstacles.tres")
-	var swamp_game_data = preload("res://Scenes/Resources/Envionments/projectiles_obstacles.tres")
-
 	biomes_data["EnvironmentCave"] = {
 		"ground_obstacles" : environment_cave_data.obstacles_array
 		# "top_obstacles": environment_cave_data.obstacles_array,

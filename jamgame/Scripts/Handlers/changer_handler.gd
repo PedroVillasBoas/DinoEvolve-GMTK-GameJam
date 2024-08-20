@@ -12,11 +12,12 @@ class_name Changer_Handler
 @export var spawn_handler : Spawn_Handler
 
 var environment_list : Array[PackedScene]
+var environment_list_name : Array[String]
 var current_environment_index : int = 0
 var current_environment_instance : Node
 
 signal fall_down
-signal change_environment
+signal change_environment (value : String)
 signal chicken_time
 signal dino_time
 
@@ -26,6 +27,13 @@ func _ready() -> void:
 		map_stone_ruins,
 		map_super_mountain_dusk,
 		map_swamp_game
+	]
+	
+	environment_list_name = [
+		"EnvironmentCave",
+		"StoneRuins",
+		"SuperMountainDusk",
+		"SwampGame",
 	]
 	
 	score_handler.connect("score_changed", Callable(self, "_on_score_changed"))
@@ -59,4 +67,4 @@ func load_environment(environment_scene: PackedScene) -> void:
 	emit_signal("change_environment", environment_scene.resource_name)
 
 	# Updating the Spawn Handler to match the new environment
-	spawn_handler.change_biome(environment_scene.resource_name)
+	spawn_handler.change_biome(environment_list_name[current_environment_index])
